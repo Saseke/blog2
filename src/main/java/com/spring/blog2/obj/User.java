@@ -1,5 +1,10 @@
 package com.spring.blog2.obj;
 
+/**
+ * 用户登录
+ * @author SongMengYuan
+ * @version 1.0
+ */
 public class User {
     private Integer id;
 

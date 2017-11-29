@@ -4,7 +4,9 @@ import com.spring.blog2.obj.User;
 import com.spring.blog2.obj.UserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserMapper {
     long countByExample(UserExample example);
 

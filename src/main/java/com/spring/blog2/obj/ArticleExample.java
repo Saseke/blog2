@@ -425,63 +425,63 @@ public class ArticleExample {
             return (Criteria) this;
         }
 
-        public Criteria andColumn8IsNull() {
-            addCriterion("column_8 is null");
+        public Criteria andBrowsetimeIsNull() {
+            addCriterion("browseTime is null");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8IsNotNull() {
-            addCriterion("column_8 is not null");
+        public Criteria andBrowsetimeIsNotNull() {
+            addCriterion("browseTime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8EqualTo(Integer value) {
-            addCriterion("column_8 =", value, "column8");
+        public Criteria andBrowsetimeEqualTo(Integer value) {
+            addCriterion("browseTime =", value, "browsetime");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8NotEqualTo(Integer value) {
-            addCriterion("column_8 <>", value, "column8");
+        public Criteria andBrowsetimeNotEqualTo(Integer value) {
+            addCriterion("browseTime <>", value, "browsetime");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8GreaterThan(Integer value) {
-            addCriterion("column_8 >", value, "column8");
+        public Criteria andBrowsetimeGreaterThan(Integer value) {
+            addCriterion("browseTime >", value, "browsetime");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8GreaterThanOrEqualTo(Integer value) {
-            addCriterion("column_8 >=", value, "column8");
+        public Criteria andBrowsetimeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("browseTime >=", value, "browsetime");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8LessThan(Integer value) {
-            addCriterion("column_8 <", value, "column8");
+        public Criteria andBrowsetimeLessThan(Integer value) {
+            addCriterion("browseTime <", value, "browsetime");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8LessThanOrEqualTo(Integer value) {
-            addCriterion("column_8 <=", value, "column8");
+        public Criteria andBrowsetimeLessThanOrEqualTo(Integer value) {
+            addCriterion("browseTime <=", value, "browsetime");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8In(List<Integer> values) {
-            addCriterion("column_8 in", values, "column8");
+        public Criteria andBrowsetimeIn(List<Integer> values) {
+            addCriterion("browseTime in", values, "browsetime");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8NotIn(List<Integer> values) {
-            addCriterion("column_8 not in", values, "column8");
+        public Criteria andBrowsetimeNotIn(List<Integer> values) {
+            addCriterion("browseTime not in", values, "browsetime");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8Between(Integer value1, Integer value2) {
-            addCriterion("column_8 between", value1, value2, "column8");
+        public Criteria andBrowsetimeBetween(Integer value1, Integer value2) {
+            addCriterion("browseTime between", value1, value2, "browsetime");
             return (Criteria) this;
         }
 
-        public Criteria andColumn8NotBetween(Integer value1, Integer value2) {
-            addCriterion("column_8 not between", value1, value2, "column8");
+        public Criteria andBrowsetimeNotBetween(Integer value1, Integer value2) {
+            addCriterion("browseTime not between", value1, value2, "browsetime");
             return (Criteria) this;
         }
     }

@@ -2,6 +2,11 @@ package com.spring.blog2.obj;
 
 import java.util.Date;
 
+/**
+ * 博客的文章类
+ * @author SongMengYuan
+ * @version 1.0
+ */
 public class Article {
     private Integer id;
 
@@ -13,11 +18,9 @@ public class Article {
 
     private Date updatetime;
 
-    private Integer column8;
+    private Integer browsetime;
 
     private String content;
-
-    private String viewed;
 
     public Integer getId() {
         return id;
@@ -59,12 +62,12 @@ public class Article {
         this.updatetime = updatetime;
     }
 
-    public Integer getColumn8() {
-        return column8;
+    public Integer getBrowsetime() {
+        return browsetime;
     }
 
-    public void setColumn8(Integer column8) {
-        this.column8 = column8;
+    public void setBrowsetime(Integer browsetime) {
+        this.browsetime = browsetime;
     }
 
     public String getContent() {
@@ -73,13 +76,5 @@ public class Article {
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
-    }
-
-    public String getViewed() {
-        return viewed;
-    }
-
-    public void setViewed(String viewed) {
-        this.viewed = viewed == null ? null : viewed.trim();
     }
 }

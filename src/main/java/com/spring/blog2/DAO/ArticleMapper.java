@@ -2,9 +2,14 @@ package com.spring.blog2.DAO;
 
 import com.spring.blog2.obj.Article;
 import com.spring.blog2.obj.ArticleExample;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.session.RowBounds;
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface ArticleMapper {
     long countByExample(ArticleExample example);
 
@@ -16,7 +21,11 @@ public interface ArticleMapper {
 
     int insertSelective(Article record);
 
+    List<Article> selectByExampleWithBLOBs(ArticleExample example, RowBounds rowBounds);
+
     List<Article> selectByExampleWithBLOBs(ArticleExample example);
+
+    List<Article> selectByExample(ArticleExample example, RowBounds rowBounds);
 
     List<Article> selectByExample(ArticleExample example);
 

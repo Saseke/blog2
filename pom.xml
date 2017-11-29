@@ -25,10 +25,12 @@
     </properties>
 
     <dependencies>
-        <!--    <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-            </dependency>-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.0.4</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -51,25 +53,25 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.44</version>
         </dependency>
-            <!--thymeleaf-->
+        <!--thymeleaf-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-            <!--log4j的使用-->
+        <!--log4j的使用-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j</artifactId>
             <version>1.3.8.RELEASE</version>
         </dependency>
-            <!--junit-->
+        <!--junit-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-                <!--整合mybatis-->
+        <!--整合mybatis-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -81,7 +83,7 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-            <!--mybatis的generator的使用-->
+        <!--mybatis的generator的使用-->
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
