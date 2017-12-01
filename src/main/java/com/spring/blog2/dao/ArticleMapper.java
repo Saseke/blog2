@@ -1,12 +1,9 @@
-package com.spring.blog2.DAO;
+package com.spring.blog2.dao;
 
-import com.spring.blog2.obj.Article;
-import com.spring.blog2.obj.ArticleExample;
-
+import com.spring.blog2.entity.Article;
+import com.spring.blog2.entity.ArticleExample;
 import java.util.List;
-
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -15,21 +12,17 @@ public interface ArticleMapper {
 
     int deleteByExample(ArticleExample example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(Long id);
 
     int insert(Article record);
 
     int insertSelective(Article record);
 
-    List<Article> selectByExampleWithBLOBs(ArticleExample example, RowBounds rowBounds);
-
     List<Article> selectByExampleWithBLOBs(ArticleExample example);
-
-    List<Article> selectByExample(ArticleExample example, RowBounds rowBounds);
 
     List<Article> selectByExample(ArticleExample example);
 
-    Article selectByPrimaryKey(Integer id);
+    Article selectByPrimaryKey(Long id);
 
     int updateByExampleSelective(@Param("record") Article record, @Param("example") ArticleExample example);
 

@@ -1,18 +1,13 @@
-package com.spring.blog2.obj;
+package com.spring.blog2.entity;
 
 import java.util.Date;
 
-/**
- * 博客的文章类
- * @author SongMengYuan
- * @version 1.0
- */
 public class Article {
-    private Integer id;
+    private Long id;
 
     private String title;
 
-    private String author;
+    private String authorName;
 
     private Date createtime;
 
@@ -20,13 +15,17 @@ public class Article {
 
     private Integer browsetime;
 
+    private Long authorId;
+
+    private Long categoryId;
+
     private String content;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -38,12 +37,12 @@ public class Article {
         this.title = title == null ? null : title.trim();
     }
 
-    public String getAuthor() {
-        return author;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setAuthor(String author) {
-        this.author = author == null ? null : author.trim();
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName == null ? null : authorName.trim();
     }
 
     public Date getCreatetime() {
@@ -68,6 +67,22 @@ public class Article {
 
     public void setBrowsetime(Integer browsetime) {
         this.browsetime = browsetime;
+    }
+
+    public Long getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(Long authorId) {
+        this.authorId = authorId;
+    }
+
+    public Long getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getContent() {

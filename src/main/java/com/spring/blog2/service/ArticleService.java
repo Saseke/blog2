@@ -1,6 +1,6 @@
 package com.spring.blog2.service;
 
-import com.spring.blog2.obj.Article;
+import com.spring.blog2.entity.Article;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -114,6 +114,13 @@ public interface ArticleService {
      * @return 查询到的文章
      */
     List<Article> findByBrowseGreater(long time, boolean blob);
+
+    /**
+     * 分局分类名称查询分类文章
+     * @param classifyName
+     * @return
+     */
+    List<Article> findByClassify(String classifyName);
 
     /**
      * 插入文章
