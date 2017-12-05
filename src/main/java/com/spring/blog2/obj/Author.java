@@ -1,17 +1,21 @@
 package com.spring.blog2.obj;
 
-public class User {
-    private Integer id;
+import java.util.Date;
+
+public class Author {
+    private Long id;
 
     private String username;
 
     private String password;
 
-    public Integer getId() {
+    private Date lastLoginDate;
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -29,5 +33,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
+    }
+
+    public Date getLastLoginDate() {
+        return lastLoginDate;
+    }
+
+    public void setLastLoginDate(Date lastLoginDate) {
+        this.lastLoginDate = lastLoginDate;
     }
 }

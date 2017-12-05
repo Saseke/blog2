@@ -2,16 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.spring.blog2.DAO.ArticleMapper">
   <resultMap id="BaseResultMap" type="com.spring.blog2.obj.Article">
-    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="id" jdbcType="BIGINT" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="author_name" jdbcType="VARCHAR" property="authorName" />
     <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
     <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
-    <result column="column_8" jdbcType="INTEGER" property="column8" />
+    <result column="browseTime" jdbcType="INTEGER" property="browsetime" />
+    <result column="author_Id" jdbcType="BIGINT" property="authorId" />
+    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.spring.blog2.obj.Article">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
-    <result column="viewed" jdbcType="LONGVARCHAR" property="viewed" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -72,10 +73,10 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, title, author, createtime, updatetime, column_8
+    id, title, author_name, createtime, updatetime, browseTime, author_Id, category_id
   </sql>
   <sql id="Blob_Column_List">
-    content, viewed
+    content
   </sql>
   <select id="selectByExampleWithBLOBs" parameterType="com.spring.blog2.obj.ArticleExample" resultMap="ResultMapWithBLOBs">
     select
@@ -109,17 +110,17 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
     select 
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
     from article
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from article
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.spring.blog2.obj.ArticleExample">
     delete from article
@@ -128,18 +129,20 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.spring.blog2.obj.Article">
-    <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Integer">
+    <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into article (id, title, author, 
-      createtime, updatetime, column_8, 
-      content, viewed)
-    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
-      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, #{column8,jdbcType=INTEGER}, 
-      #{content,jdbcType=LONGVARCHAR}, #{viewed,jdbcType=LONGVARCHAR})
+    insert into article (id, title, author_name, 
+      createtime, updatetime, browseTime, 
+      author_Id, category_id, content
+      )
+    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{authorName,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, #{browsetime,jdbcType=INTEGER}, 
+      #{authorId,jdbcType=BIGINT}, #{categoryId,jdbcType=BIGINT}, #{content,jdbcType=LONGVARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.spring.blog2.obj.Article">
-    <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Integer">
+    <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into article
@@ -148,8 +151,8 @@
       <if test="title != null">
         title,
       </if>
-      <if test="author != null">
-        author,
+      <if test="authorName != null">
+        author_name,
       </if>
       <if test="createtime != null">
         createtime,
@@ -157,23 +160,26 @@
       <if test="updatetime != null">
         updatetime,
       </if>
-      <if test="column8 != null">
-        column_8,
+      <if test="browsetime != null">
+        browseTime,
+      </if>
+      <if test="authorId != null">
+        author_Id,
+      </if>
+      <if test="categoryId != null">
+        category_id,
       </if>
       <if test="content != null">
         content,
       </if>
-      <if test="viewed != null">
-        viewed,
-      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      #{id,jdbcType=INTEGER},
+      #{id,jdbcType=BIGINT},
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
       </if>
-      <if test="author != null">
-        #{author,jdbcType=VARCHAR},
+      <if test="authorName != null">
+        #{authorName,jdbcType=VARCHAR},
       </if>
       <if test="createtime != null">
         #{createtime,jdbcType=TIMESTAMP},
@@ -181,14 +187,17 @@
       <if test="updatetime != null">
         #{updatetime,jdbcType=TIMESTAMP},
       </if>
-      <if test="column8 != null">
-        #{column8,jdbcType=INTEGER},
+      <if test="browsetime != null">
+        #{browsetime,jdbcType=INTEGER},
+      </if>
+      <if test="authorId != null">
+        #{authorId,jdbcType=BIGINT},
+      </if>
+      <if test="categoryId != null">
+        #{categoryId,jdbcType=BIGINT},
       </if>
       <if test="content != null">
         #{content,jdbcType=LONGVARCHAR},
-      </if>
-      <if test="viewed != null">
-        #{viewed,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -202,13 +211,13 @@
     update article
     <set>
       <if test="record.id != null">
-        id = #{record.id,jdbcType=INTEGER},
+        id = #{record.id,jdbcType=BIGINT},
       </if>
       <if test="record.title != null">
         title = #{record.title,jdbcType=VARCHAR},
       </if>
-      <if test="record.author != null">
-        author = #{record.author,jdbcType=VARCHAR},
+      <if test="record.authorName != null">
+        author_name = #{record.authorName,jdbcType=VARCHAR},
       </if>
       <if test="record.createtime != null">
         createtime = #{record.createtime,jdbcType=TIMESTAMP},
@@ -216,14 +225,17 @@
       <if test="record.updatetime != null">
         updatetime = #{record.updatetime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.column8 != null">
-        column_8 = #{record.column8,jdbcType=INTEGER},
+      <if test="record.browsetime != null">
+        browseTime = #{record.browsetime,jdbcType=INTEGER},
+      </if>
+      <if test="record.authorId != null">
+        author_Id = #{record.authorId,jdbcType=BIGINT},
+      </if>
+      <if test="record.categoryId != null">
+        category_id = #{record.categoryId,jdbcType=BIGINT},
       </if>
       <if test="record.content != null">
         content = #{record.content,jdbcType=LONGVARCHAR},
-      </if>
-      <if test="record.viewed != null">
-        viewed = #{record.viewed,jdbcType=LONGVARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -232,26 +244,29 @@
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update article
-    set id = #{record.id,jdbcType=INTEGER},
+    set id = #{record.id,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
-      author = #{record.author,jdbcType=VARCHAR},
+      author_name = #{record.authorName,jdbcType=VARCHAR},
       createtime = #{record.createtime,jdbcType=TIMESTAMP},
       updatetime = #{record.updatetime,jdbcType=TIMESTAMP},
-      column_8 = #{record.column8,jdbcType=INTEGER},
-      content = #{record.content,jdbcType=LONGVARCHAR},
-      viewed = #{record.viewed,jdbcType=LONGVARCHAR}
+      browseTime = #{record.browsetime,jdbcType=INTEGER},
+      author_Id = #{record.authorId,jdbcType=BIGINT},
+      category_id = #{record.categoryId,jdbcType=BIGINT},
+      content = #{record.content,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update article
-    set id = #{record.id,jdbcType=INTEGER},
+    set id = #{record.id,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
-      author = #{record.author,jdbcType=VARCHAR},
+      author_name = #{record.authorName,jdbcType=VARCHAR},
       createtime = #{record.createtime,jdbcType=TIMESTAMP},
       updatetime = #{record.updatetime,jdbcType=TIMESTAMP},
-      column_8 = #{record.column8,jdbcType=INTEGER}
+      browseTime = #{record.browsetime,jdbcType=INTEGER},
+      author_Id = #{record.authorId,jdbcType=BIGINT},
+      category_id = #{record.categoryId,jdbcType=BIGINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -262,8 +277,8 @@
       <if test="title != null">
         title = #{title,jdbcType=VARCHAR},
       </if>
-      <if test="author != null">
-        author = #{author,jdbcType=VARCHAR},
+      <if test="authorName != null">
+        author_name = #{authorName,jdbcType=VARCHAR},
       </if>
       <if test="createtime != null">
         createtime = #{createtime,jdbcType=TIMESTAMP},
@@ -271,36 +286,42 @@
       <if test="updatetime != null">
         updatetime = #{updatetime,jdbcType=TIMESTAMP},
       </if>
-      <if test="column8 != null">
-        column_8 = #{column8,jdbcType=INTEGER},
+      <if test="browsetime != null">
+        browseTime = #{browsetime,jdbcType=INTEGER},
+      </if>
+      <if test="authorId != null">
+        author_Id = #{authorId,jdbcType=BIGINT},
+      </if>
+      <if test="categoryId != null">
+        category_id = #{categoryId,jdbcType=BIGINT},
       </if>
       <if test="content != null">
         content = #{content,jdbcType=LONGVARCHAR},
       </if>
-      <if test="viewed != null">
-        viewed = #{viewed,jdbcType=LONGVARCHAR},
-      </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.spring.blog2.obj.Article">
     update article
     set title = #{title,jdbcType=VARCHAR},
-      author = #{author,jdbcType=VARCHAR},
+      author_name = #{authorName,jdbcType=VARCHAR},
       createtime = #{createtime,jdbcType=TIMESTAMP},
       updatetime = #{updatetime,jdbcType=TIMESTAMP},
-      column_8 = #{column8,jdbcType=INTEGER},
-      content = #{content,jdbcType=LONGVARCHAR},
-      viewed = #{viewed,jdbcType=LONGVARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+      browseTime = #{browsetime,jdbcType=INTEGER},
+      author_Id = #{authorId,jdbcType=BIGINT},
+      category_id = #{categoryId,jdbcType=BIGINT},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.spring.blog2.obj.Article">
     update article
     set title = #{title,jdbcType=VARCHAR},
-      author = #{author,jdbcType=VARCHAR},
+      author_name = #{authorName,jdbcType=VARCHAR},
       createtime = #{createtime,jdbcType=TIMESTAMP},
       updatetime = #{updatetime,jdbcType=TIMESTAMP},
-      column_8 = #{column8,jdbcType=INTEGER}
-    where id = #{id,jdbcType=INTEGER}
+      browseTime = #{browsetime,jdbcType=INTEGER},
+      author_Id = #{authorId,jdbcType=BIGINT},
+      category_id = #{categoryId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

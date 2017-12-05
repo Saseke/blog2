@@ -3,27 +3,29 @@ package com.spring.blog2.obj;
 import java.util.Date;
 
 public class Article {
-    private Integer id;
+    private Long id;
 
     private String title;
 
-    private String author;
+    private String authorName;
 
     private Date createtime;
 
     private Date updatetime;
 
-    private Integer column8;
+    private Integer browsetime;
+
+    private Long authorId;
+
+    private Long categoryId;
 
     private String content;
 
-    private String viewed;
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -35,12 +37,12 @@ public class Article {
         this.title = title == null ? null : title.trim();
     }
 
-    public String getAuthor() {
-        return author;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setAuthor(String author) {
-        this.author = author == null ? null : author.trim();
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName == null ? null : authorName.trim();
     }
 
     public Date getCreatetime() {
@@ -59,12 +61,28 @@ public class Article {
         this.updatetime = updatetime;
     }
 
-    public Integer getColumn8() {
-        return column8;
+    public Integer getBrowsetime() {
+        return browsetime;
     }
 
-    public void setColumn8(Integer column8) {
-        this.column8 = column8;
+    public void setBrowsetime(Integer browsetime) {
+        this.browsetime = browsetime;
+    }
+
+    public Long getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(Long authorId) {
+        this.authorId = authorId;
+    }
+
+    public Long getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getContent() {
@@ -73,13 +91,5 @@ public class Article {
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
-    }
-
-    public String getViewed() {
-        return viewed;
-    }
-
-    public void setViewed(String viewed) {
-        this.viewed = viewed == null ? null : viewed.trim();
     }
 }
