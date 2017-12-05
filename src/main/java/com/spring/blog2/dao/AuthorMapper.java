@@ -1,7 +1,7 @@
-package com.spring.blog2.DAO;
+package com.spring.blog2.dao;
 
-import com.spring.blog2.obj.Author;
-import com.spring.blog2.obj.AuthorExample;
+import com.spring.blog2.entity.Author;
+import com.spring.blog2.entity.AuthorExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

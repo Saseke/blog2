@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <!-- saved from url=(0026)http://www.ghostchina.com/ -->
-<html lang="zh-CN">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -96,9 +95,10 @@
     <div class="container">
         <div class="row">
 
+            <!--/*@thymesVar id="list" type=""*/-->
             <main class="col-md-8 main-content">
 
-                <article id="109" class="post tag-android tag-ke-hu-duan">
+                <article id="" class="post tag-android tag-ke-hu-duan">
                     <!--文章开头-->
                     <div class="post-head">
                         <h1 class="post-title"><a href="http://www.ghostchina.com/android-app-for-ghost/">Android 版
@@ -132,6 +132,8 @@
                         </div>
                     </footer>
                 </article>
+
+
                 <!--页数-->
                 <nav class="pagination" role="navigation">
                     <span class="page-number">第 1 页 ⁄ 共 9 页</span>
