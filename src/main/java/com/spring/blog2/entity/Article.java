@@ -1,4 +1,4 @@
-package com.spring.blog2.obj;
+package com.spring.blog2.entity;
 
 import java.util.Date;
 
