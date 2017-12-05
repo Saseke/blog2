@@ -4,7 +4,9 @@ import com.spring.blog2.obj.Author;
 import com.spring.blog2.obj.AuthorExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface AuthorMapper {
     long countByExample(AuthorExample example);
 

@@ -4,7 +4,9 @@ import com.spring.blog2.obj.Category;
 import com.spring.blog2.obj.CategoryExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface CategoryMapper {
     long countByExample(CategoryExample example);
 
