@@ -1,7 +1,8 @@
 package com.spring.blog2.service.Impl;
 
 import com.spring.blog2.dao.ArticleMapper;
-import com.spring.blog2.entity.Article;
+import com.spring.blog2.obj.Article;
+import com.spring.blog2.obj.ArticleExample;
 import com.spring.blog2.service.ArticleService;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +13,17 @@ import java.util.List;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
+
     private final ArticleMapper articleMapper;
 
     @Autowired
     public ArticleServiceImpl(ArticleMapper articleMapper) {
         this.articleMapper = articleMapper;
+    }
+
+    @Override
+    public long countByAuthor(String author) {
+        return 0;
     }
 
     @Override
@@ -46,7 +53,8 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public List<Article> findAll() {
-        return null;
+        ArticleExample articleExample = new ArticleExample();
+        return articleMapper.selectByExample(articleExample);
     }
 
     @Override
@@ -60,27 +68,32 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public List<Article> findByOrderByBrowse(boolean blob) {
+    public List<Article> findByTitle(String title, boolean withBLOB, boolean fuzzy) {
         return null;
     }
 
     @Override
-    public List<Article> findByBrowse(long start, long end, boolean blob, RowBounds rowBounds) {
+    public List<Article> findByOrderByBrowse(boolean withBLOB, RowBounds rowBounds) {
         return null;
     }
 
     @Override
-    public List<Article> findByBrowse(long start, long end, boolean blob) {
+    public List<Article> findByOrderByBrowse(boolean withBLOB) {
         return null;
     }
 
     @Override
-    public List<Article> findByBrowseGreater(long time, boolean blob) {
+    public List<Article> findByCreateDate(Date start, Date end, boolean withBLOB, RowBounds rowBounds) {
         return null;
     }
 
     @Override
-    public List<Article> findByClassify(String classifyName) {
+    public List<Article> findByCreateDate(Date start, Date end, boolean withBLOB) {
+        return null;
+    }
+
+    @Override
+    public List<Article> findByBrowseGreater(long time, boolean withBLOB) {
         return null;
     }
 
@@ -100,12 +113,37 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public int updateWithBlobById(Article article) {
+    public int deleteByTitle(String title) {
         return 0;
     }
 
     @Override
-    public int updateWithoutBlobById(Article article) {
+    public int deleteBetweenDate(Date start, Date end) {
+        return 0;
+    }
+
+    @Override
+    public int deleteAfterDate(Date date) {
+        return 0;
+    }
+
+    @Override
+    public int deleteBeforeDate(Date date) {
+        return 0;
+    }
+
+    @Override
+    public int updateAllWithoutBLOBById(Article article) {
+        return 0;
+    }
+
+    @Override
+    public int updateAllById(Article article) {
+        return 0;
+    }
+
+    @Override
+    public int updateSelectiveById(Article article) {
         return 0;
     }
 }

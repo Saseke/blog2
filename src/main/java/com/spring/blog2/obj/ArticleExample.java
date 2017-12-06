@@ -1,4 +1,4 @@
-package com.spring.blog2.entity;
+package com.spring.blog2.obj;
 
 import java.util.ArrayList;
 import java.util.Date;

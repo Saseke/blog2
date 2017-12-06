@@ -1,6 +1,7 @@
 package com.spring.blog2.service;
 
-import com.spring.blog2.entity.Comment;
+
+import com.spring.blog2.obj.Comment;
 
 /**
  * 评论操作的接口

@@ -1,10 +1,8 @@
 package com.spring.blog2.dao;
 
-import com.spring.blog2.entity.Comment;
-import com.spring.blog2.entity.CommentExample;
-
+import com.spring.blog2.obj.Comment;
+import com.spring.blog2.obj.CommentExample;
 import java.util.List;
-
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

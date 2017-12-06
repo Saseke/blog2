@@ -1,6 +1,7 @@
 package com.spring.blog2.service;
 
-import com.spring.blog2.entity.Category;
+
+import com.spring.blog2.obj.Category;
 
 import java.util.List;
 
