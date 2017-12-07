@@ -60,7 +60,7 @@ public interface ArticleService {
 
     /**
      * 列出所有的文章
-     *
+     *  不包括文章内容
      * @return 返回所有的文章对象
      */
     List<Article> findAll();

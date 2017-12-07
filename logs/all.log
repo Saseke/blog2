@@ -1,431 +1,788 @@
-2017-12-06 00:02:03,012  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 23988 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
-2017-12-06 00:02:03,035  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
-2017-12-06 00:02:04,501  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
-2017-12-06 00:02:04,620  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e75aa0d: startup date [Wed Dec 06 00:02:04 CST 2017]; root of context hierarchy
-2017-12-06 00:02:11,664  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
-2017-12-06 00:02:13,197  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 8581 ms
-2017-12-06 00:02:13,418  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
-2017-12-06 00:02:13,423  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
-2017-12-06 00:02:13,442  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2017-12-06 00:02:13,443  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2017-12-06 00:02:13,444  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
-2017-12-06 00:02:15,515  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e75aa0d: startup date [Wed Dec 06 00:02:04 CST 2017]; root of context hierarchy
-2017-12-06 00:02:15,650  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
-2017-12-06 00:02:15,654  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
-2017-12-06 00:02:15,659  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2017-12-06 00:02:15,660  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2017-12-06 00:02:15,808  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 00:02:15,809  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 00:02:15,925  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 00:02:18,235  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
-2017-12-06 00:02:19,062  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
-2017-12-06 00:02:19,116  INFO Blog2Application:57 - Started Blog2Application in 17.965 seconds (JVM running for 22.454)
-2017-12-06 00:03:21,536  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
-2017-12-06 00:03:21,612  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 61 ms
-2017-12-06 00:03:23,193  INFO IndexController:28 - --------主页---------------
-2017-12-06 00:03:23,245  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
-2017-12-06 00:03:23,345  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
-2017-12-06 00:03:23,346  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
-2017-12-06 00:03:23,346  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
-2017-12-06 00:03:23,347  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
-2017-12-06 00:03:23,359  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
-[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
-[THYMELEAF] * Template modes:
-[THYMELEAF]     * LEGACYHTML5
-[THYMELEAF]     * VALIDXML
-[THYMELEAF]     * VALIDXHTML
-[THYMELEAF]     * HTML5
-[THYMELEAF]     * XML
-[THYMELEAF]     * XHTML
-[THYMELEAF] * Template resolvers (in order):
-[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
-[THYMELEAF] * Message resolvers (in order):
-[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
-[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
-[THYMELEAF]     * Prefix: "th"
-[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
-[THYMELEAF]     * Prefix: "layout"
-[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
-2017-12-06 00:03:23,360  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
-2017-12-06 00:03:23,603 ERROR TemplateEngine:1085 - [THYMELEAF][http-nio-8080-exec-1] Exception processing template "index": Unsupported entity requested with PUBLICID "null" and SYSTEMID "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-3.dtd". Make sure a corresponding org.thymeleaf.doctype.resolution.IDocTypeResolutionEntry implementation is provided by you dialect
-2017-12-06 00:05:06,204  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e75aa0d: startup date [Wed Dec 06 00:02:04 CST 2017]; root of context hierarchy
-2017-12-06 00:05:06,263  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
-2017-12-06 00:05:19,926  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 24254 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
-2017-12-06 00:05:19,947  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
-2017-12-06 00:05:21,183  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
-2017-12-06 00:05:21,851  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e75aa0d: startup date [Wed Dec 06 00:05:21 CST 2017]; root of context hierarchy
-2017-12-06 00:05:26,125  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
-2017-12-06 00:05:26,322  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4476 ms
-2017-12-06 00:05:26,537  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
-2017-12-06 00:05:26,542  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
-2017-12-06 00:05:26,543  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2017-12-06 00:05:26,543  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2017-12-06 00:05:26,544  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
-2017-12-06 00:05:27,984  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e75aa0d: startup date [Wed Dec 06 00:05:21 CST 2017]; root of context hierarchy
-2017-12-06 00:05:28,073  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
-2017-12-06 00:05:28,076  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
-2017-12-06 00:05:28,081  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2017-12-06 00:05:28,083  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2017-12-06 00:05:28,125  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 00:05:28,125  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 00:05:28,173  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 00:05:29,075  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
-2017-12-06 00:05:29,179  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
-2017-12-06 00:05:29,187  INFO Blog2Application:57 - Started Blog2Application in 11.23 seconds (JVM running for 18.34)
-2017-12-06 00:05:36,807  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
-2017-12-06 00:05:36,833  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
-2017-12-06 00:05:37,911  INFO IndexController:28 - --------主页---------------
-2017-12-06 00:05:37,933  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
-2017-12-06 00:05:38,039  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
-2017-12-06 00:05:38,040  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
-2017-12-06 00:05:38,041  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
-2017-12-06 00:05:38,041  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
-2017-12-06 00:05:38,045  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
-[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
-[THYMELEAF] * Template modes:
-[THYMELEAF]     * XML
-[THYMELEAF]     * HTML5
-[THYMELEAF]     * XHTML
-[THYMELEAF]     * VALIDXML
-[THYMELEAF]     * VALIDXHTML
-[THYMELEAF]     * LEGACYHTML5
-[THYMELEAF] * Template resolvers (in order):
-[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
-[THYMELEAF] * Message resolvers (in order):
-[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
-[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
-[THYMELEAF]     * Prefix: "th"
-[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
-[THYMELEAF]     * Prefix: "layout"
-[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
-2017-12-06 00:05:38,046  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
-2017-12-06 00:05:38,149 ERROR TemplateEngine:1085 - [THYMELEAF][http-nio-8080-exec-1] Exception processing template "index": Unsupported entity requested with PUBLICID "null" and SYSTEMID "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-3.dtd". Make sure a corresponding org.thymeleaf.doctype.resolution.IDocTypeResolutionEntry implementation is provided by you dialect
-2017-12-06 00:09:32,307  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e75aa0d: startup date [Wed Dec 06 00:05:21 CST 2017]; root of context hierarchy
-2017-12-06 00:09:32,480  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
-2017-12-06 00:10:14,924  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 24656 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
-2017-12-06 00:10:15,061  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
-2017-12-06 00:10:15,504  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Wed Dec 06 00:10:15 CST 2017]; root of context hierarchy
-2017-12-06 00:10:16,262  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
-2017-12-06 00:10:19,188  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
-2017-12-06 00:10:19,390  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 3890 ms
-2017-12-06 00:10:19,616  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
-2017-12-06 00:10:19,621  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
-2017-12-06 00:10:19,623  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2017-12-06 00:10:19,623  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2017-12-06 00:10:19,624  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
-2017-12-06 00:10:22,656  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Wed Dec 06 00:10:15 CST 2017]; root of context hierarchy
-2017-12-06 00:10:22,899  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
-2017-12-06 00:10:22,973  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
-2017-12-06 00:10:22,978  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2017-12-06 00:10:22,980  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2017-12-06 00:10:23,042  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 00:10:23,043  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 00:10:23,089  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 00:10:23,518  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2017-12-06 00:10:24,337  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
-2017-12-06 00:10:25,295  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
-2017-12-06 00:10:25,514  INFO Blog2Application:57 - Started Blog2Application in 11.846 seconds (JVM running for 13.745)
-2017-12-06 00:11:10,060  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
-2017-12-06 00:11:10,210  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 109 ms
-2017-12-06 00:11:12,576  INFO IndexController:28 - --------主页---------------
-2017-12-06 16:29:58,464  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.spring.blog2.service.ArticleServiceTest], using SpringBootContextLoader
-2017-12-06 16:29:58,499  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.spring.blog2.service.ArticleServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2017-12-06 16:29:59,096  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2017-12-06 16:29:59,265  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@371a67ec, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5ed828d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@50d0686, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a3d45bd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1e7c7811, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77ec78b9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1a3869f4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@a38d7a3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@77f99a05, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@63440df3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3aeaafa6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@76a3e297]
-2017-12-06 16:30:01,127  INFO ArticleServiceTest:48 - Starting ArticleServiceTest on smy-ThinkPad-E450c with PID 8057 (started by smy in /media/smy/IdeaProjects/blog2)
-2017-12-06 16:30:01,129  INFO ArticleServiceTest:593 - No active profile set, falling back to default profiles: default
-2017-12-06 16:30:01,428  INFO GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@186f8716: startup date [Wed Dec 06 16:30:01 CST 2017]; root of context hierarchy
-2017-12-06 16:30:03,370  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
-2017-12-06 16:30:06,685  WARN GenericWebApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/controller/IndexController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleServiceImpl': Unsatisfied dependency expressed through field 'articleMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleMapper' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/dao/ArticleMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-2017-12-06 16:30:06,771  INFO AutoConfigurationReportLoggingInitializer:101 - 
+2017-12-07 10:39:28,818  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 2088 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 10:39:28,866  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 10:39:29,202  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:39:29 CST 2017]; root of context hierarchy
+2017-12-07 10:39:30,218  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 10:39:34,361  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 10:39:34,575  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 5379 ms
+2017-12-07 10:39:34,895  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 10:39:34,902  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 10:39:34,957  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 10:39:34,957  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 10:39:34,958  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 10:39:37,176  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:39:29 CST 2017]; root of context hierarchy
+2017-12-07 10:39:37,243  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 10:39:37,247  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:39:37,250  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 10:39:37,251  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 10:39:37,291  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:39:37,292  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:39:37,338  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:39:37,733  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 10:39:38,117  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 10:39:38,241  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 10:39:38,247  INFO Blog2Application:57 - Started Blog2Application in 11.105 seconds (JVM running for 17.491)
+2017-12-07 10:39:47,426  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 10:39:47,717  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 90 ms
+2017-12-07 10:39:49,301  INFO IndexController:28 - --------主页---------------
+2017-12-07 10:39:49,303  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@32674928]-------------
+2017-12-07 10:40:22,818  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:39:29 CST 2017]; root of context hierarchy
+2017-12-07 10:40:22,878  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 10:40:34,561  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 2361 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 10:40:34,586  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 10:40:34,930  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:40:34 CST 2017]; root of context hierarchy
+2017-12-07 10:40:35,847  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 10:40:40,838  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 10:40:41,439  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 6515 ms
+2017-12-07 10:40:41,717  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 10:40:41,725  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 10:40:41,726  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 10:40:41,727  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 10:40:41,727  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 10:40:43,697  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:40:34 CST 2017]; root of context hierarchy
+2017-12-07 10:40:43,853  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 10:40:43,860  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:40:43,864  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 10:40:43,865  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 10:40:43,957  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:40:43,958  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:40:44,035  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:40:44,420  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 10:40:44,953  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 10:40:45,093  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 10:40:45,105  INFO Blog2Application:57 - Started Blog2Application in 11.861 seconds (JVM running for 18.988)
+2017-12-07 10:40:50,107  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 10:40:50,146  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2017-12-07 10:40:51,336  INFO IndexController:28 - --------主页---------------
+2017-12-07 10:40:51,337  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@66c4e9ee]-------------
+2017-12-07 10:41:44,312  INFO IndexController:28 - --------主页---------------
+2017-12-07 10:41:44,313  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@5432728e]-------------
+2017-12-07 10:50:57,194  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:40:34 CST 2017]; root of context hierarchy
+2017-12-07 10:50:57,291  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 10:51:10,660  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 2833 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 10:51:10,686  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 10:51:11,053  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:51:11 CST 2017]; root of context hierarchy
+2017-12-07 10:51:11,903  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 10:51:16,100  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 10:51:16,242  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 5210 ms
+2017-12-07 10:51:16,404  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 10:51:16,409  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 10:51:16,411  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 10:51:16,411  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 10:51:16,412  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 10:51:18,566  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:51:11 CST 2017]; root of context hierarchy
+2017-12-07 10:51:18,656  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 10:51:18,660  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(long,org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:51:18,663  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:51:18,666  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 10:51:18,667  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 10:51:18,719  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:51:18,720  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:51:18,790  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:51:19,140  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 10:51:19,616  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 10:51:19,742  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 10:51:19,750  INFO Blog2Application:57 - Started Blog2Application in 10.671 seconds (JVM running for 14.789)
+2017-12-07 10:51:28,384  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 10:51:28,410  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2017-12-07 10:51:29,838  INFO IndexController:28 - --------主页---------------
+2017-12-07 10:51:29,840  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@322803a6]-------------
+2017-12-07 10:52:46,620  INFO IndexController:28 - --------主页---------------
+2017-12-07 10:52:46,621  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@78553112]-------------
+2017-12-07 10:54:09,751  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:51:11 CST 2017]; root of context hierarchy
+2017-12-07 10:54:09,754  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 10:54:21,633  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 3255 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 10:54:21,654  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 10:54:21,899  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:54:21 CST 2017]; root of context hierarchy
+2017-12-07 10:54:22,662  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 10:54:27,203  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 10:54:27,420  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 5525 ms
+2017-12-07 10:54:27,606  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 10:54:27,611  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 10:54:27,612  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 10:54:27,613  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 10:54:27,613  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 10:54:29,427  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:54:21 CST 2017]; root of context hierarchy
+2017-12-07 10:54:29,724  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 10:54:29,728  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(long,org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:54:29,794  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:54:29,799  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 10:54:29,801  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 10:54:29,849  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:54:29,850  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:54:29,907  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:54:30,445  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 10:54:31,027  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 10:54:31,137  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 10:54:31,143  INFO Blog2Application:57 - Started Blog2Application in 10.997 seconds (JVM running for 17.283)
+2017-12-07 10:54:34,541  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 10:54:34,564  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2017-12-07 10:54:35,667  INFO IndexController:28 - --------主页---------------
+2017-12-07 10:54:35,668  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@4b72e674]-------------
+2017-12-07 10:55:28,444  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:54:21 CST 2017]; root of context hierarchy
+2017-12-07 10:55:28,447  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 10:55:34,187  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 3469 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 10:55:34,200  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 10:55:34,495  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:55:34 CST 2017]; root of context hierarchy
+2017-12-07 10:55:35,176  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 10:55:38,586  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 10:55:38,811  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4341 ms
+2017-12-07 10:55:38,988  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 10:55:38,993  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 10:55:38,994  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 10:55:38,994  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 10:55:38,995  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 10:55:40,520  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:55:34 CST 2017]; root of context hierarchy
+2017-12-07 10:55:40,594  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 10:55:40,598  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(long,org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:55:40,601  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:55:40,605  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 10:55:40,607  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 10:55:40,642  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:55:40,642  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:55:40,688  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:55:40,919  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 10:55:41,202  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 10:55:41,315  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 10:55:41,322  INFO Blog2Application:57 - Started Blog2Application in 8.313 seconds (JVM running for 10.548)
+2017-12-07 10:56:14,280  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 10:56:14,305  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2017-12-07 10:56:17,755  INFO IndexController:28 - --------主页---------------
+2017-12-07 10:56:17,756  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@6c306038]-------------
+2017-12-07 10:56:19,770  INFO ArticleController:27 - ------see article--------com.spring.blog2.obj.Article@3d1cd5ce-----------------
+2017-12-07 10:56:19,791  WARN DefaultHandlerExceptionResolver:361 - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "singleArticle"
+2017-12-07 10:57:29,291  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:55:34 CST 2017]; root of context hierarchy
+2017-12-07 10:57:29,295  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 10:57:34,188  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 3668 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 10:57:34,192  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 10:57:34,324  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:57:34 CST 2017]; root of context hierarchy
+2017-12-07 10:57:34,704  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 10:57:36,870  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 10:57:37,024  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2709 ms
+2017-12-07 10:57:37,219  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 10:57:37,224  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 10:57:37,226  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 10:57:37,227  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 10:57:37,227  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 10:57:38,382  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:57:34 CST 2017]; root of context hierarchy
+2017-12-07 10:57:38,449  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 10:57:38,452  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:57:38,455  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 10:57:38,459  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 10:57:38,460  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 10:57:38,497  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:57:38,498  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:57:38,544  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 10:57:38,808  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 10:57:39,074  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 10:57:39,136  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 10:57:39,142  INFO Blog2Application:57 - Started Blog2Application in 5.44 seconds (JVM running for 6.483)
+2017-12-07 10:57:51,178  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 10:57:51,203  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2017-12-07 10:57:51,857  INFO IndexController:28 - --------主页---------------
+2017-12-07 10:57:51,858  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@6f3c6219]-------------
+2017-12-07 10:57:53,898  INFO ArticleController:29 - ------see article--------com.spring.blog2.obj.Article@49b17ec5-----------------
+2017-12-07 11:00:08,973  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 10:57:34 CST 2017]; root of context hierarchy
+2017-12-07 11:00:08,976  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:00:13,810  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 3870 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:00:13,817  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:00:13,974  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:00:13 CST 2017]; root of context hierarchy
+2017-12-07 11:00:14,424  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:00:16,753  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:00:16,904  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2936 ms
+2017-12-07 11:00:17,080  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:00:17,086  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:00:17,087  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:00:17,088  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:00:17,088  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:00:18,189  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:00:13 CST 2017]; root of context hierarchy
+2017-12-07 11:00:18,260  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:00:18,263  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(long,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:00:18,266  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:00:18,270  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:00:18,272  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:00:18,311  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:00:18,312  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:00:18,362  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:00:18,579  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:00:18,953  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:00:19,024  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:00:19,031  INFO Blog2Application:57 - Started Blog2Application in 5.698 seconds (JVM running for 7.069)
+2017-12-07 11:00:35,951  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:00:35,973  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2017-12-07 11:00:36,611  INFO ArticleController:28 - ------see article--------com.spring.blog2.obj.Article@60cb6697-----------------
+2017-12-07 11:00:36,642  WARN DefaultHandlerExceptionResolver:361 - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "singleArticle"
+2017-12-07 11:02:28,826  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:00:13 CST 2017]; root of context hierarchy
+2017-12-07 11:02:28,829  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:02:32,013  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 4055 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:02:32,017  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:02:32,143  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:02:32 CST 2017]; root of context hierarchy
+2017-12-07 11:02:32,432  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:02:34,673  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:02:34,808  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2680 ms
+2017-12-07 11:02:34,984  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:02:34,989  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:02:34,990  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:02:34,991  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:02:34,991  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:02:36,036  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:02:32 CST 2017]; root of context hierarchy
+2017-12-07 11:02:36,104  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:02:36,107  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(long,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:02:36,111  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:02:36,115  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:02:36,116  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:02:36,149  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:02:36,150  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:02:36,192  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:02:36,403  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:02:36,692  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:02:36,748  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:02:36,754  INFO Blog2Application:57 - Started Blog2Application in 5.186 seconds (JVM running for 6.543)
+2017-12-07 11:02:45,118  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:02:45,140  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2017-12-07 11:02:45,811  INFO ArticleController:28 - ------see article--------com.spring.blog2.obj.Article@211a2674-----------------
+2017-12-07 11:02:45,845  WARN DefaultHandlerExceptionResolver:361 - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "singleArticle"
+2017-12-07 11:04:02,803  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:02:32 CST 2017]; root of context hierarchy
+2017-12-07 11:04:02,808  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:04:12,026  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 4221 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:04:12,032  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:04:12,151  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6d5620ce: startup date [Thu Dec 07 11:04:12 CST 2017]; root of context hierarchy
+2017-12-07 11:04:12,450  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:04:14,388  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:04:14,550  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2407 ms
+2017-12-07 11:04:14,794  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:04:14,800  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:04:14,801  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:04:14,802  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:04:14,802  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:04:16,219  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6d5620ce: startup date [Thu Dec 07 11:04:12 CST 2017]; root of context hierarchy
+2017-12-07 11:04:16,314  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:04:16,318  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:04:16,321  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:04:16,325  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:04:16,328  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:04:16,377  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:04:16,378  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:04:16,441  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:04:16,764  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:04:17,200  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:04:17,287  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:04:17,296  INFO Blog2Application:57 - Started Blog2Application in 6.122 seconds (JVM running for 9.615)
+2017-12-07 11:04:25,022  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:04:25,056  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2017-12-07 11:06:01,790  INFO ArticleController:29 - ------see article--------com.spring.blog2.obj.Article@31e0ec7a-----------------
+2017-12-07 11:06:35,708  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6d5620ce: startup date [Thu Dec 07 11:04:12 CST 2017]; root of context hierarchy
+2017-12-07 11:06:35,714  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:06:35,778  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:06:41,394  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 4415 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:06:41,398  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:06:41,528  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:06:41 CST 2017]; root of context hierarchy
+2017-12-07 11:06:41,912  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:06:44,853  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:06:44,994  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 3480 ms
+2017-12-07 11:06:45,161  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:06:45,166  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:06:45,168  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:06:45,168  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:06:45,169  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:06:46,252  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:06:41 CST 2017]; root of context hierarchy
+2017-12-07 11:06:46,318  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:06:46,322  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:06:46,325  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:06:46,328  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:06:46,330  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:06:46,364  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:06:46,364  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:06:46,410  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:06:46,633  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:06:46,948  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:06:47,010  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:06:47,017  INFO Blog2Application:57 - Started Blog2Application in 6.118 seconds (JVM running for 7.18)
+2017-12-07 11:07:05,635  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:07:05,658  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2017-12-07 11:07:06,277  INFO ArticleController:29 - ------see article--------com.spring.blog2.obj.Article@4eaa2a7c-----------------
+2017-12-07 11:08:01,309  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:06:41 CST 2017]; root of context hierarchy
+2017-12-07 11:08:01,312  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:08:04,796  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 4603 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:08:04,799  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:08:05,058  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:08:05 CST 2017]; root of context hierarchy
+2017-12-07 11:08:05,617  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:08:08,102  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:08:08,228  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 3181 ms
+2017-12-07 11:08:08,415  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:08:08,421  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:08:08,422  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:08:08,422  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:08:08,422  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:08:09,623  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:08:05 CST 2017]; root of context hierarchy
+2017-12-07 11:08:09,712  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:08:09,717  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:08:09,722  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:08:09,727  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:08:09,730  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:08:09,778  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:08:09,779  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:08:09,854  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:08:10,119  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:08:10,377  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:08:10,437  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:08:10,444  INFO Blog2Application:57 - Started Blog2Application in 6.174 seconds (JVM running for 7.639)
+2017-12-07 11:08:16,754  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:08:16,775  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2017-12-07 11:08:17,390  INFO ArticleController:29 - ------see article--------com.spring.blog2.obj.Article@201f54c0-----------------
+2017-12-07 11:08:17,544 ERROR runtime:59 - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> article.shortTime  [in template "singlearticle.ftl" at line 89, column 35]
 
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2017-12-06 16:30:06,783 ERROR SpringApplication:771 - Application startup failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/controller/IndexController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleServiceImpl': Unsatisfied dependency expressed through field 'articleMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleMapper' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/dao/ArticleMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleServiceImpl': Unsatisfied dependency expressed through field 'articleMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleMapper' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/dao/ArticleMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
-	... 42 more
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleMapper' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/dao/ArticleMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1357)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1249)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
-	... 56 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1342)
-	... 67 more
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
-	... 79 more
-Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523)
-	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
-	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$d83d4e51.CGLIB$sqlSessionFactory$0(<generated>)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$d83d4e51$$FastClassBySpringCGLIB$$51df2ea0.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$d83d4e51.sqlSessionFactory(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
-	... 80 more
-Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:259)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:125)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:78)
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:520)
-	... 93 more
-Caused by: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:878)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
-	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
-	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
-	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
-	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:257)
-	... 96 more
-2017-12-06 16:30:06,852 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@371a67ec] to prepare test instance [com.spring.blog2.service.ArticleServiceTest@2d5f7182]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/controller/IndexController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleServiceImpl': Unsatisfied dependency expressed through field 'articleMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleMapper' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/dao/ArticleMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
-	... 24 more
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleServiceImpl': Unsatisfied dependency expressed through field 'articleMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleMapper' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/dao/ArticleMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
-	... 42 more
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleMapper' defined in file [/media/smy/IdeaProjects/blog2/target/classes/com/spring/blog2/dao/ArticleMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1357)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1249)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
-	... 56 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1342)
-	... 67 more
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
-	... 79 more
-Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/media/smy/IdeaProjects/blog2/target/classes/mybatis/mapper/ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523)
-	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
-	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$d83d4e51.CGLIB$sqlSessionFactory$0(<generated>)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$d83d4e51$$FastClassBySpringCGLIB$$51df2ea0.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$d83d4e51.sqlSessionFactory(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
-	... 80 more
-Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:259)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:125)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:78)
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:520)
-	... 93 more
-Caused by: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:878)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
-	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
-	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
-	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
-	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:257)
-	... 96 more
-2017-12-06 16:44:09,694  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.spring.blog2.service.ArticleServiceTest], using SpringBootContextLoader
-2017-12-06 16:44:09,712  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.spring.blog2.service.ArticleServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2017-12-06 16:44:10,021  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2017-12-06 16:44:10,185  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@371a67ec, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5ed828d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@50d0686, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a3d45bd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1e7c7811, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77ec78b9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1a3869f4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@a38d7a3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@77f99a05, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@63440df3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3aeaafa6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@76a3e297]
-2017-12-06 16:44:13,075  INFO ArticleServiceTest:48 - Starting ArticleServiceTest on smy-ThinkPad-E450c with PID 8543 (started by smy in /media/smy/IdeaProjects/blog2)
-2017-12-06 16:44:13,081  INFO ArticleServiceTest:593 - No active profile set, falling back to default profiles: default
-2017-12-06 16:44:13,418  INFO GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@186f8716: startup date [Wed Dec 06 16:44:13 CST 2017]; root of context hierarchy
-2017-12-06 16:44:14,967  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
-2017-12-06 16:44:20,732  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@186f8716: startup date [Wed Dec 06 16:44:13 CST 2017]; root of context hierarchy
-2017-12-06 16:44:20,915  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
-2017-12-06 16:44:20,920  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
-2017-12-06 16:44:20,926  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2017-12-06 16:44:20,928  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2017-12-06 16:44:21,026  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 16:44:21,028  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 16:44:21,113  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-12-06 16:44:21,768  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2017-12-06 16:44:22,715  INFO ArticleServiceTest:57 - Started ArticleServiceTest in 11.621 seconds (JVM running for 14.55)
-2017-12-06 16:44:24,584  INFO ArticleServiceTest:27 - ------list all article----[com.spring.blog2.obj.Article@2f521c4]-------------
-2017-12-06 16:44:24,670  INFO GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@186f8716: startup date [Wed Dec 06 16:44:13 CST 2017]; root of context hierarchy
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${article.shortTime}  [in template "singlearticle.ftl" at line 89, column 33]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:465)
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:387)
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:356)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:96)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:59)
+	at freemarker.core.Environment.visit(Environment.java:326)
+	at freemarker.core.Environment.visit(Environment.java:332)
+	at freemarker.core.Environment.process(Environment.java:305)
+	at freemarker.template.Template.process(Template.java:378)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:368)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:285)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:235)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-07 11:09:22,452  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:08:05 CST 2017]; root of context hierarchy
+2017-12-07 11:09:22,457  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:09:30,136  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 4782 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:09:30,146  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:09:30,393  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:09:30 CST 2017]; root of context hierarchy
+2017-12-07 11:09:31,144  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:09:34,527  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:09:34,762  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4375 ms
+2017-12-07 11:09:35,045  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:09:35,059  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:09:35,060  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:09:35,061  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:09:35,062  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:09:36,835  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:09:30 CST 2017]; root of context hierarchy
+2017-12-07 11:09:36,962  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:09:36,969  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:09:36,976  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:09:36,980  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:09:36,983  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:09:37,047  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:09:37,049  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:09:37,130  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:09:37,503  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:09:38,044  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:09:38,139  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:09:38,150  INFO Blog2Application:57 - Started Blog2Application in 8.761 seconds (JVM running for 10.601)
+2017-12-07 11:09:47,048  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:09:47,081  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2017-12-07 11:09:47,967  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@3834a853-----------------
+2017-12-07 11:10:00,681  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:10:00,682  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@2278ae8e]-------------
+2017-12-07 11:10:04,253  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@390cb137-----------------
+2017-12-07 11:20:15,145  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:20:15,269  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@655ce274, com.spring.blog2.obj.Article@c38540a, com.spring.blog2.obj.Article@40634fed]-------------
+2017-12-07 11:21:48,636  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:21:48,710  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@2fce60fd, com.spring.blog2.obj.Article@43806b73, com.spring.blog2.obj.Article@728a873b]-------------
+2017-12-07 11:21:59,931  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@2aaa8c82-----------------
+2017-12-07 11:23:11,299  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:09:30 CST 2017]; root of context hierarchy
+2017-12-07 11:23:11,315  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:23:23,943  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 6292 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:23:23,963  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:23:24,688  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:23:24 CST 2017]; root of context hierarchy
+2017-12-07 11:23:25,714  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:23:31,672  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:23:32,079  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 7403 ms
+2017-12-07 11:23:32,447  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:23:32,455  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:23:32,458  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:23:32,459  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:23:32,460  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:23:34,535  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:23:24 CST 2017]; root of context hierarchy
+2017-12-07 11:23:34,649  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:23:34,657  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:23:34,661  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:23:34,667  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:23:34,670  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:23:34,724  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:23:34,733  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:23:34,858  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:23:35,235  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:23:35,734  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:23:35,906  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:23:35,922  INFO Blog2Application:57 - Started Blog2Application in 13.647 seconds (JVM running for 20.629)
+2017-12-07 11:23:53,462  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:23:53,490  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2017-12-07 11:23:54,316  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:23:54,317  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@44c42f90, com.spring.blog2.obj.Article@79a39c44, com.spring.blog2.obj.Article@4a925342]-------------
+2017-12-07 11:26:12,275  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:23:24 CST 2017]; root of context hierarchy
+2017-12-07 11:26:12,279  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:26:15,540  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 6966 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:26:15,544  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:26:15,659  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:26:15 CST 2017]; root of context hierarchy
+2017-12-07 11:26:15,910  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:26:18,113  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:26:18,236  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2581 ms
+2017-12-07 11:26:18,399  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:26:18,404  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:26:18,405  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:26:18,406  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:26:18,406  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:26:19,446  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:26:15 CST 2017]; root of context hierarchy
+2017-12-07 11:26:19,518  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:26:19,522  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:26:19,524  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:26:19,528  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:26:19,530  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:26:19,572  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:26:19,572  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:26:19,619  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:26:19,833  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:26:20,135  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:26:20,198  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:26:20,203  INFO Blog2Application:57 - Started Blog2Application in 5.148 seconds (JVM running for 6.485)
+2017-12-07 11:26:32,534  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:26:32,563  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2017-12-07 11:26:33,243  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:26:33,244  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@5828e3ad, com.spring.blog2.obj.Article@24d3edca, com.spring.blog2.obj.Article@22a34f32]-------------
+2017-12-07 11:26:40,968  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@60cf219f-----------------
+2017-12-07 11:28:24,944  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:26:15 CST 2017]; root of context hierarchy
+2017-12-07 11:28:24,952  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:28:29,495  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 7503 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:28:29,501  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:28:29,745  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:28:29 CST 2017]; root of context hierarchy
+2017-12-07 11:28:30,346  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:28:34,031  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:28:34,228  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4491 ms
+2017-12-07 11:28:34,547  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:28:34,552  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:28:34,553  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:28:34,553  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:28:34,554  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:28:36,218  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:28:29 CST 2017]; root of context hierarchy
+2017-12-07 11:28:36,331  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:28:36,335  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:28:36,340  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:28:36,347  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:28:36,349  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:28:36,405  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:28:36,406  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:28:36,526  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:28:36,912  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:28:37,304  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:28:37,398  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:28:37,409  INFO Blog2Application:57 - Started Blog2Application in 8.704 seconds (JVM running for 10.744)
+2017-12-07 11:28:50,541  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:28:50,570  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2017-12-07 11:28:51,498  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:28:51,499  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@31f197e6, com.spring.blog2.obj.Article@6e8cb8c4, com.spring.blog2.obj.Article@46a323c7]-------------
+2017-12-07 11:34:45,946  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:28:29 CST 2017]; root of context hierarchy
+2017-12-07 11:34:45,952  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:34:51,017  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 8550 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:34:51,030  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:34:51,314  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:34:51 CST 2017]; root of context hierarchy
+2017-12-07 11:34:51,919  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:34:55,307  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:34:55,494  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4186 ms
+2017-12-07 11:34:55,815  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:34:55,822  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:34:55,823  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:34:55,824  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:34:55,824  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:34:57,530  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:34:51 CST 2017]; root of context hierarchy
+2017-12-07 11:34:57,638  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:34:57,642  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:34:57,648  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:34:57,655  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:34:57,658  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:34:57,712  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:34:57,713  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:34:57,803  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:34:58,157  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:34:58,572  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:34:58,664  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:34:58,675  INFO Blog2Application:57 - Started Blog2Application in 8.357 seconds (JVM running for 10.518)
+2017-12-07 11:35:05,551  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:35:05,587  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2017-12-07 11:35:06,501  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:35:06,503  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@3eaf5a98, com.spring.blog2.obj.Article@1c538bf1, com.spring.blog2.obj.Article@1eb27379]-------------
+2017-12-07 11:35:20,571  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:35:20,572  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@2cb09b5c, com.spring.blog2.obj.Article@58bbca26, com.spring.blog2.obj.Article@7d48f960]-------------
+2017-12-07 11:41:04,408  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:41:04,409  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@32dc4171, com.spring.blog2.obj.Article@44546f26, com.spring.blog2.obj.Article@d0a16ed]-------------
+2017-12-07 11:43:48,115  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:34:51 CST 2017]; root of context hierarchy
+2017-12-07 11:43:48,131  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:43:53,315  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 10598 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:43:53,323  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:43:53,510  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:43:53 CST 2017]; root of context hierarchy
+2017-12-07 11:43:53,953  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:43:57,768  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:43:57,998  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4502 ms
+2017-12-07 11:43:58,304  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:43:58,313  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:43:58,315  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:43:58,316  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:43:58,317  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:43:59,995  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:43:53 CST 2017]; root of context hierarchy
+2017-12-07 11:44:00,104  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:44:00,111  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:44:00,115  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:44:00,122  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:44:00,125  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:44:00,182  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:44:00,182  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:44:00,262  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:44:00,569  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:44:01,033  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:44:01,125  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:44:01,134  INFO Blog2Application:57 - Started Blog2Application in 8.624 seconds (JVM running for 10.499)
+2017-12-07 11:44:18,122  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:44:18,168  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 45 ms
+2017-12-07 11:44:19,101  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:44:19,102  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@422597fb, com.spring.blog2.obj.Article@26c46a2, com.spring.blog2.obj.Article@63420937]-------------
+2017-12-07 11:45:14,684  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@44546f26-----------------
+2017-12-07 11:47:22,176  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:43:53 CST 2017]; root of context hierarchy
+2017-12-07 11:47:22,184  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:47:30,843  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 11159 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:47:30,852  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:47:31,025  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:47:31 CST 2017]; root of context hierarchy
+2017-12-07 11:47:31,686  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:47:35,361  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:47:35,601  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4581 ms
+2017-12-07 11:47:36,039  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:47:36,048  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:47:36,050  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:47:36,052  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:47:36,054  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:47:38,844  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:47:31 CST 2017]; root of context hierarchy
+2017-12-07 11:47:38,991  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:47:38,997  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:47:39,005  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:47:39,022  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:47:39,025  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:47:39,092  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:47:39,092  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:47:39,197  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:47:39,667  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:47:40,219  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:47:40,334  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:47:40,344  INFO Blog2Application:57 - Started Blog2Application in 10.285 seconds (JVM running for 12.312)
+2017-12-07 11:48:06,908  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:48:06,946  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2017-12-07 11:48:07,873  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:48:07,875  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@237be5d5, com.spring.blog2.obj.Article@73a70e6f, com.spring.blog2.obj.Article@20812255]-------------
+2017-12-07 11:48:22,909  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:47:31 CST 2017]; root of context hierarchy
+2017-12-07 11:48:22,914  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:48:30,754  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 11521 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:48:30,766  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:48:31,108  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:48:31 CST 2017]; root of context hierarchy
+2017-12-07 11:48:31,672  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:48:35,476  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:48:35,669  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4591 ms
+2017-12-07 11:48:35,985  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:48:35,991  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:48:35,992  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:48:35,992  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:48:35,992  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:48:37,536  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:48:31 CST 2017]; root of context hierarchy
+2017-12-07 11:48:37,627  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:48:37,635  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:48:37,639  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:48:37,643  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:48:37,646  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:48:37,704  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:48:37,704  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:48:37,784  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:48:38,107  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:48:38,535  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:48:38,620  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:48:38,626  INFO Blog2Application:57 - Started Blog2Application in 8.812 seconds (JVM running for 10.97)
+2017-12-07 11:48:43,730  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:48:43,769  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2017-12-07 11:49:17,910  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:48:31 CST 2017]; root of context hierarchy
+2017-12-07 11:49:17,913  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:49:23,191  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 11891 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:49:23,195  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:49:23,336  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:49:23 CST 2017]; root of context hierarchy
+2017-12-07 11:49:23,597  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:49:26,127  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:49:26,288  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2957 ms
+2017-12-07 11:49:26,492  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:49:26,497  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:49:26,499  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:49:26,500  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:49:26,500  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:49:27,567  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:49:23 CST 2017]; root of context hierarchy
+2017-12-07 11:49:27,633  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:49:27,637  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:49:27,639  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:49:27,642  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:49:27,644  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:49:27,682  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:49:27,682  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:49:27,726  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:49:27,937  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:49:28,245  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:49:28,304  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:49:28,312  INFO Blog2Application:57 - Started Blog2Application in 5.558 seconds (JVM running for 7.02)
+2017-12-07 11:53:50,330  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:49:23 CST 2017]; root of context hierarchy
+2017-12-07 11:53:50,335  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:53:55,550  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 12279 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:53:55,555  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:53:55,672  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:53:55 CST 2017]; root of context hierarchy
+2017-12-07 11:53:56,037  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:53:58,672  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:53:58,816  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 3148 ms
+2017-12-07 11:53:59,005  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:53:59,010  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:53:59,011  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:53:59,011  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:53:59,012  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:54:00,077  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:53:55 CST 2017]; root of context hierarchy
+2017-12-07 11:54:00,147  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:54:00,151  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:54:00,155  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:54:00,160  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:54:00,163  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:54:00,202  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:54:00,203  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:54:00,251  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:54:00,456  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:54:00,756  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:54:00,815  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:54:00,822  INFO Blog2Application:57 - Started Blog2Application in 5.741 seconds (JVM running for 7.01)
+2017-12-07 11:54:09,448  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:54:09,469  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2017-12-07 11:54:10,132  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:54:10,132  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@4794961c, com.spring.blog2.obj.Article@6b501e81, com.spring.blog2.obj.Article@478fd128]-------------
+2017-12-07 11:54:17,273  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@3ea313b5-----------------
+2017-12-07 11:54:26,040  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@7cfbe899-----------------
+2017-12-07 11:55:24,712  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:53:55 CST 2017]; root of context hierarchy
+2017-12-07 11:55:24,719  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:55:29,568  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 12590 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:55:29,574  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:55:29,778  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:55:29 CST 2017]; root of context hierarchy
+2017-12-07 11:55:30,303  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:55:34,279  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:55:34,491  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4724 ms
+2017-12-07 11:55:34,771  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:55:34,781  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:55:34,782  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:55:34,786  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:55:34,787  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:55:36,479  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:55:29 CST 2017]; root of context hierarchy
+2017-12-07 11:55:36,597  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:55:36,601  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:55:36,607  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:55:36,613  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:55:36,615  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:55:36,679  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:55:36,680  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:55:36,791  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:55:37,127  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:55:37,648  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:55:37,750  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:55:37,762  INFO Blog2Application:57 - Started Blog2Application in 9.083 seconds (JVM running for 11.095)
+2017-12-07 11:55:50,284  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 11:55:50,325  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2017-12-07 11:55:51,279  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@51aeba62-----------------
+2017-12-07 11:55:59,186  INFO IndexController:28 - --------主页---------------
+2017-12-07 11:55:59,188  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@35112884, com.spring.blog2.obj.Article@378ff4ab, com.spring.blog2.obj.Article@222afd83]-------------
+2017-12-07 11:59:48,809  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:55:29 CST 2017]; root of context hierarchy
+2017-12-07 11:59:48,848  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-12-07 11:59:52,790  INFO Blog2Application:48 - Starting Blog2Application on smy-ThinkPad-E450c with PID 12967 (/media/smy/IdeaProjects/blog2/target/classes started by smy in /media/smy/IdeaProjects/blog2)
+2017-12-07 11:59:52,794  INFO Blog2Application:593 - No active profile set, falling back to default profiles: default
+2017-12-07 11:59:52,916  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:59:52 CST 2017]; root of context hierarchy
+2017-12-07 11:59:53,307  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2017-12-07 11:59:55,704  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-12-07 11:59:55,869  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2959 ms
+2017-12-07 11:59:56,123  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-07 11:59:56,128  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-07 11:59:56,130  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-07 11:59:56,130  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-07 11:59:56,131  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-07 11:59:57,275  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:59:52 CST 2017]; root of context hierarchy
+2017-12-07 11:59:57,344  INFO RequestMappingHandlerMapping:543 - Mapped "{[/demo],methods=[GET]}" onto public java.lang.String com.spring.blog2.WebController.demo()
+2017-12-07 11:59:57,348  INFO RequestMappingHandlerMapping:543 - Mapped "{[/article/see/{id}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.ArticleController.singleArticle(java.lang.String,org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:59:57,351  INFO RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.spring.blog2.controller.IndexController.index(org.springframework.web.servlet.ModelAndView)
+2017-12-07 11:59:57,355  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-07 11:59:57,357  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-07 11:59:57,396  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:59:57,397  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:59:57,443  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-07 11:59:57,674  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-12-07 11:59:57,946  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-12-07 11:59:58,009  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2017-12-07 11:59:58,014  INFO Blog2Application:57 - Started Blog2Application in 5.744 seconds (JVM running for 7.15)
+2017-12-07 12:01:34,169  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-07 12:01:34,202  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2017-12-07 12:01:35,046  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@4eaa2a7c-----------------
+2017-12-07 12:01:38,126  INFO IndexController:28 - --------主页---------------
+2017-12-07 12:01:38,127  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@5d0117e, com.spring.blog2.obj.Article@480aabd6, com.spring.blog2.obj.Article@399c9729]-------------
+2017-12-07 12:01:46,332  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@6dd714f4-----------------
+2017-12-07 12:01:50,758  INFO IndexController:28 - --------主页---------------
+2017-12-07 12:01:50,759  INFO IndexController:29 - -----article的内容------[com.spring.blog2.obj.Article@f69c2c9, com.spring.blog2.obj.Article@c0fb1f0, com.spring.blog2.obj.Article@5e32611b]-------------
+2017-12-07 12:01:53,155  INFO ArticleController:31 - ------see article--------com.spring.blog2.obj.Article@4c116063-----------------
+2017-12-07 12:02:06,739  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a4102b8: startup date [Thu Dec 07 11:59:52 CST 2017]; root of context hierarchy
+2017-12-07 12:02:06,743  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown

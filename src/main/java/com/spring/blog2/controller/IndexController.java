@@ -23,8 +23,10 @@ public class IndexController {
 
     @GetMapping("/")
     public ModelAndView index(ModelAndView modelAndView) {
+//        Article article = articleService.findById(1);
         List<Article> list = articleService.findAll();
         logger.info("--------主页---------------");
+        logger.info("-----article的内容------" + list.toString() + "-------------");
         modelAndView.setViewName("index");
         return modelAndView.addObject("list", list);
     }

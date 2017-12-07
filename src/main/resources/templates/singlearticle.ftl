@@ -62,7 +62,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="main-menu">
                     <ul class="menu">
-                        <li class="nav-current" role="presentation"><a href="/">首页</a></li>
+                        <li class="nav-current" role="presentation">
+                            <a href="/">首页</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -77,25 +79,22 @@
     <div class="container">
         <div class="row">
 
+            <!--/*@thymesVar id="list" type=""*/-->
             <main class="col-md-8 main-content" id="content">
-            <#list list as article>
                 <article id="" class="post tag-android tag-ke-hu-duan">
                     <!--文章开头-->
                     <div class="post-head">
-                        <h1 class="post-title"><a href="/article/see/${article.id}">${article.title}</a></h1>
+                        <h1 class="post-title"><a href="/">${article.title}</a></h1>
                         <div class="post-meta">
                             <span class="author">作者：${article.authorName}</a></span> •
                             <time class="post-date">
-                            ${article.shortTime}
+                                ${article.shortTime}
                             </time>
                         </div>
                     </div>
                     <!--文章正文-->
                     <div class="post-content">
                         <p>${article.content}</p>
-                    </div>
-                    <div class="post-permalink">
-                        <a href="/article/see/${article.id}" class="btn btn-default">阅读全文</a>
                     </div>
                     <!--文章尾端-->
                     <footer class="post-footer clearfix">
@@ -106,19 +105,9 @@
                         </div>
                     </footer>
                 </article>
-            </#list>
-                <!--页数-->
-                <nav class="pagination" role="navigation">
-                    <span class="page-number">第 1 页 ⁄ 共 9 页</span>
-                </nav>
             </main>
+
             <aside class="col-md-4 sidebar">
-                <div class="widget">
-                    <h4 class="title">QQ群</h4>
-                    <div class="content community">
-                        <p>12班娃子群</p>
-                    </div>
-                </div>
                 <div class="widget">
                     <h4 class="title">标签云</h4>
                     <div class="content tag-cloud">
@@ -132,6 +121,7 @@
                     </div>
                 </div>
             </aside>
+
         </div>
     </div>
 </section>

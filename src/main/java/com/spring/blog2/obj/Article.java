@@ -21,6 +21,16 @@ public class Article {
 
     private String content;
 
+    private String shortTime;
+
+    public String getShortTime() {
+        return shortTime;
+    }
+
+    public void setShortTime(String shortTime) {
+        this.shortTime = shortTime;
+    }
+
     public Long getId() {
         return id;
     }

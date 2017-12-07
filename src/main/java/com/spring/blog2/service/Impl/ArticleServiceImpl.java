@@ -4,6 +4,7 @@ import com.spring.blog2.dao.ArticleMapper;
 import com.spring.blog2.obj.Article;
 import com.spring.blog2.obj.ArticleExample;
 import com.spring.blog2.service.ArticleService;
+import com.spring.blog2.util.TimeUtil;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,13 +49,22 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Article findById(long id) {
-        return null;
+        return articleMapper.selectByPrimaryKey(id);
     }
 
     @Override
     public List<Article> findAll() {
         ArticleExample articleExample = new ArticleExample();
-        return articleMapper.selectByExample(articleExample);
+        List<Article> list = articleMapper.selectByExample(articleExample);
+        for (Article article : list) {
+            String content = articleMapper.selectByPrimaryKey(article.getId()).getContent();
+            if (content.length() > 300) {
+                content =  content.substring(0, content.length() / 3);
+            }
+            article.setContent(content);
+            article.setShortTime(TimeUtil.getShortTime(article.getCreatetime()));
+        }
+        return list;
     }
 
     @Override

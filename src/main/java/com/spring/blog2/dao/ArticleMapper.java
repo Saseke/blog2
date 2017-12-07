@@ -2,8 +2,11 @@ package com.spring.blog2.dao;
 
 import com.spring.blog2.obj.Article;
 import com.spring.blog2.obj.ArticleExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -20,7 +23,11 @@ public interface ArticleMapper {
 
     List<Article> selectByExampleWithBLOBs(ArticleExample example);
 
+    List<Article> selectByExampleWithBLOBs(ArticleExample example, RowBounds rowBounds);
+
     List<Article> selectByExample(ArticleExample example);
+
+    List<Article> selectByExample(ArticleExample example, RowBounds rowBounds);
 
     Article selectByPrimaryKey(Long id);
 

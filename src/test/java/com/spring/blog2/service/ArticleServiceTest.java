@@ -22,6 +22,6 @@ public class ArticleServiceTest {
     @Test
     public void findAll() throws Exception {
         List<Article> list = articleService.findAll();
-        LOGGER.info("------list all article----" + list + "-------------");
+        LOGGER.info("------list all article----" + list.get(0).getContent() + "-------------");
     }
 }
