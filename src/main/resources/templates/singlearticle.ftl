@@ -7,7 +7,7 @@
 
     <link rel="shortcut icon" href="http://www.ghostchina.com/favicon.ico"/>
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/common/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="/css/monokai_sublime.min.css"/>
     <link href="/css/magnific-popup.min.css" rel="stylesheet"/>
@@ -88,7 +88,7 @@
                         <div class="post-meta">
                             <span class="author">作者：${article.authorName}</a></span> •
                             <time class="post-date">
-                                ${article.shortTime}
+                            ${article.shortTime}
                             </time>
                         </div>
                     </div>

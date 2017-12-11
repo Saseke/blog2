@@ -88,6 +88,12 @@
             <optional>true</optional>
         </dependency>
         <!--mybatis的generator的使用-->
+            <!--springSecurity-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>

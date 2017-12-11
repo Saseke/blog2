@@ -4,15 +4,12 @@
     <title>Yoke博客</title>
     <meta name="HandheldFriendly" content="True"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <link rel="shortcut icon" href="http://www.ghostchina.com/favicon.ico"/>
-
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/common/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="/css/monokai_sublime.min.css"/>
     <link href="/css/magnific-popup.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/css/screen.css"/>
-    <link rel="shortcut icon" href="/img/favicon.ico"/>
+    <link rel="shortcut icon" href="/common/img/favicon.ico"/>
     <meta name="referrer" content="origin"/>
     <script type="text/javascript" src="/js/ghost-url.min.js"></script>
     <script src="/js/share.js"></script>
@@ -30,6 +27,7 @@
         height: 100%;
     }</style>
     <link rel="stylesheet" href="/css/share_style0_24.css"/>
+    <#--背景动态特效-->
     <canvas id="c_n9" width="1920" height="990"
             style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
     <script src="/js/canvas-nest.min.js"></script>

@@ -30,4 +30,16 @@ public class IndexController {
         modelAndView.setViewName("index");
         return modelAndView.addObject("list", list);
     }
+
+    @GetMapping("/login")
+    public ModelAndView login(ModelAndView modelAndView) {
+        modelAndView.setViewName("login");
+        return modelAndView;
+    }
+
+    @GetMapping("consule")
+    public ModelAndView consule(ModelAndView modelAndView) {
+        modelAndView.setViewName("controlindex");
+        return modelAndView;
+    }
 }
