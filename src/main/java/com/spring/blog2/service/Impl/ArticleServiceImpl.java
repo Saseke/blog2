@@ -4,6 +4,7 @@ import com.spring.blog2.dao.ArticleMapper;
 import com.spring.blog2.obj.Article;
 import com.spring.blog2.obj.ArticleExample;
 import com.spring.blog2.service.ArticleService;
+import com.spring.blog2.util.StringUtil;
 import com.spring.blog2.util.TimeUtil;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +60,7 @@ public class ArticleServiceImpl implements ArticleService {
         for (Article article : list) {
             String content = articleMapper.selectByPrimaryKey(article.getId()).getContent();
             if (content.length() > 300) {
-                content =  content.substring(0, content.length() / 3);
+                content = content.substring(0, content.length() / 3);
             }
             article.setContent(content);
             article.setShortTime(TimeUtil.getShortTime(article.getCreatetime()));
@@ -108,8 +109,45 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    public List<Article> selectByCreateDate(RowBounds rowBounds) {
+        List<Article> list = articleMapper.selectByCreateDate(rowBounds);
+        for (Article article : list) {
+//            String content = articleMapper.selectByPrimaryKey(article.getId()).getContent();
+            String content = article.getContent();
+            if (content.length() > 300) {
+                content = content.substring(0, content.length() / 3);
+            }
+            article.setContent(content);
+            article.setShortTime(TimeUtil.getShortTime(article.getCreatetime()));
+        }
+        return list;
+    }
+
+    @Override
+    public List<Article> selectByCreateDate() {
+        List<Article> list = articleMapper.selectByCreateDate();
+        for (Article article : list) {
+//            String content = articleMapper.selectByPrimaryKey(article.getId()).getContent();
+            String content = article.getContent();
+            if (content.length() > 300) {
+                content = content.substring(0, content.length() / 3);
+            }
+            article.setContent(content);
+            article.setShortTime(TimeUtil.getShortTime(article.getCreatetime()));
+        }
+        return list;
+    }
+
+    @Override
     public int insertSelective(Article article) {
         return 0;
+    }
+
+    @Override
+    public int insert(Article article) {
+        article.setCreatetime(new Date());
+        article.setAuthorId(1L);
+        return articleMapper.insert(article);
     }
 
     @Override

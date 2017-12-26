@@ -124,13 +124,35 @@ public interface ArticleService {
     List<Article> findByBrowseGreater(long time, boolean withBLOB);
 
     /**
+     * 查询所有的文章，默认选择按日期 排序
+     * @return 查询得到的文章
+     */
+    List<Article> selectByCreateDate();
+
+    /**
+     * 带分页效果的查询
+     * @param rowBounds  分页参数
+     * @return
+     */
+    List<Article> selectByCreateDate(RowBounds rowBounds);
+    
+    /**
      * 选择性的插入文章内容
      *
      * @param article 插入的文章
      * @return 影响数据的条数
      */
+
+
     @Transactional
     int insertSelective(Article article);
+
+    /**
+     * 插入文章
+     * @param article
+     * @return
+     */
+    int insert(Article article);
 
     /**
      * 通过文章id删除文章

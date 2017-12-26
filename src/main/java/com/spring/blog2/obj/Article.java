@@ -102,4 +102,38 @@ public class Article {
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
     }
+    public Article(String title, String authorName, String content) {
+        this.title = title;
+        this.authorName = authorName;
+        this.content = content;
+    }
+
+    public Article() {
+    }
+
+    public Article(String title, String authorName, Date createtime, Date updatetime, Integer browsetime, Long authorId, Long categoryId, String content, String shortTime) {
+        this.title = title;
+        this.authorName = authorName;
+        this.createtime = createtime;
+        this.updatetime = updatetime;
+        this.browsetime = browsetime;
+        this.authorId = authorId;
+        this.categoryId = categoryId;
+        this.content = content;
+        this.shortTime = shortTime;
+    }
+
+    public Article(Long id, String title, String authorName, Date createtime, Date updatetime, Integer browsetime, Long authorId, Long categoryId, String content, String shortTime) {
+
+        this.id = id;
+        this.title = title;
+        this.authorName = authorName;
+        this.createtime = createtime;
+        this.updatetime = updatetime;
+        this.browsetime = browsetime;
+        this.authorId = authorId;
+        this.categoryId = categoryId;
+        this.content = content;
+        this.shortTime = shortTime;
+    }
 }

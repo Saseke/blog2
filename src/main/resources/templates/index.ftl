@@ -27,7 +27,7 @@
         height: 100%;
     }</style>
     <link rel="stylesheet" href="/css/share_style0_24.css"/>
-    <#--背景动态特效-->
+<#--背景动态特效-->
     <canvas id="c_n9" width="1920" height="990"
             style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
     <script src="/js/canvas-nest.min.js"></script>
@@ -107,7 +107,8 @@
             </#list>
                 <!--页数-->
                 <nav class="pagination" role="navigation">
-                    <span class="page-number">第 1 页 ⁄ 共 9 页</span>
+                    <span class="page-number">第 ${page} 页 ⁄ 共  页</span>
+                    <span class="page-number" href="/?page="${page}>></span>
                 </nav>
             </main>
             <aside class="col-md-4 sidebar">

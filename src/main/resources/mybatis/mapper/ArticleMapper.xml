@@ -110,6 +110,9 @@
       order by ${orderByClause}
     </if>
   </select>
+  <select id="selectByCreateDate" resultMap="ResultMapWithBLOBs">
+     SELECT * FROM article ORDER BY createtime DESC
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
     select 
     <include refid="Base_Column_List" />

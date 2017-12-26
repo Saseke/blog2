@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link href="/layui/css/layui.css" rel="stylesheet"/>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="/js/util.js"></script>
+    <script type="text/javascript" src="/layui/layui.js"></script>
+</head>
+<body style="background-color:#eee;">
+<div class="layui-form-item">
+    <label class="layui-form-label">文章标题</label>
+    <div class="layui-input-block">
+        <input type="text" id="title" name="title" required lay-verify="required" placeholder="标题" autocomplete="off"
+               class="layui-input">
+    </div>
+</div>
+<div class="layui-form-item">
+    <label class="layui-form-label">栏目名称</label>
+    <div class="layui-input-block">
+        <button class="layui-btn" onclick="editColumnName()">修改栏目名称</button>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">作者</label>
+        <div class="layui-input-block">
+            <input type="text" id="author" name="author" required lay-verify="required" placeholder="作者"
+                   autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div style="width:90%;margin-left:5%;margin-top:100px;background-color:#fff;">
+        <textarea id="txt" name="txt" style="display:none;"></textarea>
+    </div>
+    <input type="button" value="更新内容" id="btn1" class="layui-btn" style="margin-left:5%;margin-top:20px;"/>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    window.onload = function () {
+//       layui文本域中的内容一定要获取数据在创建节点之前，否则文本域中会没有数据显示
+        $.ajax({
+            type: "get",
+            url: "/article/" + getUrlVar("id"),
+            success: function (data) {
+                console.log(data);
+                $("#title").val(data.title);
+                $("#author").val(data.author);
+                $("#txt").val(data.content);
+            }
+        });
+        layui.use('layedit', function () {
+            var layedit = layui.layedit;
+            layedit.set({
+                uploadImage: {
+                    url: '/article/upload' //接口url
+                    , type: 'post' //默认post
+                    , size: 0
+                }
+            });
+            var editIndex = layedit.build('txt', {
+                height: 400
+            });
+
+            document.getElementById('btn1').onclick = function () {
+                alert(layedit.getContent(editIndex));
+            }
+        });
+
+    }
+</script>
+<script type="text/javascript">
+    function editColumnName() {
+        layer.open({
+            type: 2,
+            content: '/fragment/selectColumn.html'
+        });
+    }
+</script>

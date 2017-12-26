@@ -33,8 +33,8 @@ public class WebConfigration extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/author/form")
                 .and()
                 .authorizeRequests()
-//                访问该页面不需要身份验证,同时也是配置静态资源允许访问的地方
-                .antMatchers("/").permitAll()
+////                访问该页面不需要身份验证,同时也是配置静态资源允许访问的地方
+                .antMatchers("/article/**").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/login.ftl").permitAll()
                 .antMatchers("/**/*.js").permitAll()
