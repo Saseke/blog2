@@ -53,12 +53,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.44</version>
         </dependency>
-            <!--thymeleaf-->
-       <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>-->
-            <!--log4j的使用-->
+        <!--thymeleaf-->
+        <!-- <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+         </dependency>-->
+        <!--log4j的使用-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
@@ -88,7 +88,7 @@
             <optional>true</optional>
         </dependency>
         <!--mybatis的generator的使用-->
-            <!--springSecurity-->
+        <!--springSecurity-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -105,11 +105,29 @@
             <artifactId>mapper-spring-boot-starter</artifactId>
             <version>1.1.4</version>
         </dependency>
-<!--分页pageHelper-->
+        <!--分页pageHelper-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
             <version>5.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.3</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.liferay</groupId>
+            <artifactId>org.apache.commons.fileupload</artifactId>
+            <version>1.2.2.LIFERAY-PATCHED-1</version>
         </dependency>
     </dependencies>
 

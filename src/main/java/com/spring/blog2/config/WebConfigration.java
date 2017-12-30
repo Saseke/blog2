@@ -13,14 +13,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  */
 @Configuration
 public class WebConfigration extends WebSecurityConfigurerAdapter {
-    //    账号密码加密
-  /*  private final AuthenticationSuccessHandler handler;
-
-    @Autowired
-    public WebConfigration(AuthenticationSuccessHandler handler) {
-        this.handler = handler;
-    }*/
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -31,6 +23,7 @@ public class WebConfigration extends WebSecurityConfigurerAdapter {
         http.formLogin()
                 .loginPage("/login.ftl")
                 .loginProcessingUrl("/author/form")
+                .defaultSuccessUrl("/addArticle")
                 .and()
                 .authorizeRequests()
 ////                访问该页面不需要身份验证,同时也是配置静态资源允许访问的地方
@@ -40,6 +33,8 @@ public class WebConfigration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/**/*.js").permitAll()
                 .antMatchers("/**/*.css").permitAll()
                 .antMatchers("/**/*.jpg").permitAll()
+                .antMatchers("/upload/**").permitAll()
+                .antMatchers("/home/smy/upload/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()

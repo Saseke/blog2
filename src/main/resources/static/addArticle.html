@@ -6,8 +6,11 @@
     <title></title>
     <link href="/layui/css/layui.css" rel="stylesheet"/>
     <script src="/layui/layui.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
     <script src="/layui/layui.js"></script>
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
 </head>
 <body style="background-color:#eee;">
 <div class="layui-form-item">
@@ -17,13 +20,13 @@
                class="layui-input">
     </div>
 </div>
-<!--<div class="layui-form-item">
+<div class="layui-form-item">
     <label class="layui-form-label">选择框</label>
     <div class="layui-input-block">
         <select id="select" lay-verify="required">
         </select>
     </div>
-</div>-->
+</div>
 
 <div class="layui-form-item">
     <label class="layui-form-label">作者</label>
@@ -41,18 +44,16 @@
 </html>
 <script type="text/javascript">
     window.onload = function () {
-        /*
-                $.ajax({
-                    type: "GET",
-                    url: "/column/list",
-                    success: function (data) {
+        $.ajax({
+            type: "GET",
+            url: "/column/list",
+            success: function (data) {
 
-                        for (var i in data) {
-                            $("#select").append("<option value=" + data[i].id + ">Select" + data[i].name + "</option>");
-                        }
-                    }
-                });
-        */
+                for (var i in data) {
+                    $("#select").append("<option value=" + data[i].id + ">Select" + data[i].name + "</option>");
+                }
+            }
+        });
         layui.use('layedit', function () {
             var layedit = layui.layedit;
 
@@ -73,15 +74,16 @@
                 var content = layedit.getContent(editIndex);
                 var title = document.getElementById("title").value;
                 var author = document.getElementById("author").value;
-//                var columnId = $("select").val();  //获得下拉框的值
+                var columnId  = $("select").val();  //获得下拉框的值
                 $.ajax({
-                    url: "/article/add",
+                    url: "/article/add/",
                     type: 'post',
                     dataType: 'json',
                     contentType: "application/json",
                     data: JSON.stringify({
+                        "author": author,
                         "title": title,
-                        "authorName": author,
+                        "columnId": columnId,
                         "content": content
                     }),
                     success: function (data) {

@@ -1,7 +1,3 @@
-htmlConfig:
-  templatePrefix: mould/
-  templateSuffix: html
-  storageLocation: staticHTML
 ImgConfig:
 #  downloadPrefixAddress: /img/download
 #  downloadSuffixAddress: html

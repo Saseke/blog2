@@ -16,10 +16,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * UserDetailsService    处理用户信息获取逻辑
- * UserDetails      处理用户校验逻辑
- */
 @Service
 public class MyUserDetailService implements UserDetailsService {
     private final PasswordEncoder passwordEncoder;

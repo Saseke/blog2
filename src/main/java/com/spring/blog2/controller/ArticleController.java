@@ -60,7 +60,6 @@ public class ArticleController {
             return new Message(1, "false", "false");
         }
     }
-
     @PostMapping("/upload")
     @ResponseBody
     public String upload(HttpServletRequest request, @Param("file") MultipartFile file) throws IOException {
@@ -98,4 +97,5 @@ public class ArticleController {
         map2.put("title", newFileName);//图片名称，这个会显示在输入框里
         return new JSONObject(map).toString();
     }
+
 }
