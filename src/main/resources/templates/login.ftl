@@ -39,7 +39,7 @@
 
 <div class="container">
 
-    <form id="login" class="form-signin" method="post" action="/author/form">
+    <form id="login" class="form-signin" method="post" action="/login">
         <h2 class="form-signin-heading">Yoke博客登录</h2>
         <label for="inputEmail" class="sr-only">Username</label>
         <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Email address" required
