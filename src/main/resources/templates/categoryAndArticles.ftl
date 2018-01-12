@@ -124,13 +124,6 @@
                     <#list categorylist as category>
                         <a href="/article/findarticles/${category.id}">${category.name}</a>
                     </#list>
-                    <#--<a href="">SpringBoot</a>-->
-                    <#--<a href="">Spring</a>-->
-                    <#--<a href="">jQuery</a>-->
-                    <#--<a href="">Java基础</a>-->
-                    <#--<a href="">Mybatis</a>-->
-                    <#--<a href="">Linux</a>-->
-                    <#--<a href="">SpringSecurity</a>-->
                     </div>
                 </div>
             </aside>

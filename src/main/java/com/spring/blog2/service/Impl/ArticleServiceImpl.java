@@ -194,4 +194,21 @@ public class ArticleServiceImpl implements ArticleService {
     public int updateSelectiveById(Article article) {
         return 0;
     }
+
+    @Override
+    public List<Article> listCategoryArticle(Long id) {
+        ArticleExample articleExample = new ArticleExample();
+        articleExample.or().andCategoryIdEqualTo(id);
+        List<Article> list = articleMapper.selectByExampleWithBLOBs(articleExample);
+        for (Article article : list) {
+//            String content = articleMapper.selectByPrimaryKey(article.getId()).getContent();
+            String content = article.getContent();
+            if (content.length() > 300) {
+                content = content.substring(0, content.length() / 3);
+            }
+            article.setContent(content);
+            article.setShortTime(TimeUtil.getShortTime(article.getCreatetime()));
+        }
+        return list;
+    }
 }

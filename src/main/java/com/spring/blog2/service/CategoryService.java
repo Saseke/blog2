@@ -1,6 +1,7 @@
 package com.spring.blog2.service;
 
 
+import com.spring.blog2.obj.Article;
 import com.spring.blog2.obj.Category;
 
 import java.util.List;
@@ -55,4 +56,6 @@ public interface CategoryService {
      * @return 影响的数据条数
      */
     int delete(long id);
+
+
 }

@@ -2,8 +2,10 @@ package com.spring.blog2.controller;
 
 import com.spring.blog2.config.ImgConfig;
 import com.spring.blog2.obj.Article;
+import com.spring.blog2.obj.Category;
 import com.spring.blog2.obj.Message;
 import com.spring.blog2.service.ArticleService;
+import com.spring.blog2.service.CategoryService;
 import com.spring.blog2.util.TimeUtil;
 import org.apache.ibatis.annotations.Param;
 import org.json.JSONObject;
@@ -19,10 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @RequestMapping("/article")
@@ -36,6 +35,9 @@ public class ArticleController {
     public ArticleController(ArticleService articleService) {
         this.articleService = articleService;
     }
+
+    @Autowired
+    private CategoryService categoryService;
 
     @GetMapping("/see/{id}")
     public ModelAndView singleArticle(@PathVariable("id") String i, ModelAndView modelAndView) {
@@ -52,14 +54,18 @@ public class ArticleController {
     @ResponseBody
     public Message addArticle(@RequestBody Article article) {
         LOGGER.info("---------------添加文章:" + article.getTitle() + "---------------");
+        LOGGER.info("----------------" + article + "---------------------------");
         LOGGER.info("----------------添加文章:" + article.toString() + "------------------------");
         article.setCreatetime(new Date());
+        article.setAuthorId(1L);
+        article.setAuthorName("yoke");
         if (articleService.insert(article) == 1) {
             return new Message(0, "success", "success");
         } else {
             return new Message(1, "false", "false");
         }
     }
+
     @PostMapping("/upload")
     @ResponseBody
     public String upload(HttpServletRequest request, @Param("file") MultipartFile file) throws IOException {
@@ -98,4 +104,14 @@ public class ArticleController {
         return new JSONObject(map).toString();
     }
 
+    @GetMapping("/findarticles/{id}")
+    public ModelAndView findArticlesByCategory(@PathVariable("id") Long id, ModelAndView modelAndView) {
+        List<Category> categorylist = categoryService.list();
+        modelAndView.addObject("categorylist", categorylist);
+        modelAndView.setViewName("categoryAndArticles");
+//        return modelAndView.addObject("list", articleService.listCategoryArticle(id));
+        List<Article> list = articleService.listCategoryArticle(id);
+        modelAndView.addObject("list", list);
+        return modelAndView;
+    }
 }

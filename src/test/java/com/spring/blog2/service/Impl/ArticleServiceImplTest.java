@@ -30,4 +30,10 @@ public class ArticleServiceImplTest {
         Article article = new Article("demo", "csdcsd", "dwdcsdcsd");
         articleService.insert(article);
     }
+
+    @Test
+    public void selectByCategoryId() {
+        List<Article> list = articleService.listCategoryArticle(1L);
+        System.out.println(list.size());
+    }
 }

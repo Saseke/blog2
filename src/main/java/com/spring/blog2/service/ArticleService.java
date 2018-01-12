@@ -11,7 +11,7 @@ import java.util.List;
  * 该类对文章进行饭管理
  *
  * @author Smy
- *  @version 1.0
+ * @version 1.0
  */
 public interface ArticleService {
     /**
@@ -60,7 +60,8 @@ public interface ArticleService {
 
     /**
      * 列出所有的文章
-     *  不包括文章内容
+     * 不包括文章内容
+     *
      * @return 返回所有的文章对象
      */
     List<Article> findAll();
@@ -75,6 +76,7 @@ public interface ArticleService {
 
     /**
      * 根据一群id查询一群文章
+     *
      * @param list 文章id的集合
      * @return 一群文章
      */
@@ -125,17 +127,19 @@ public interface ArticleService {
 
     /**
      * 查询所有的文章，默认选择按日期 排序
+     *
      * @return 查询得到的文章
      */
     List<Article> selectByCreateDate();
 
     /**
      * 带分页效果的查询
-     * @param rowBounds  分页参数
+     *
+     * @param rowBounds 分页参数
      * @return
      */
     List<Article> selectByCreateDate(RowBounds rowBounds);
-    
+
     /**
      * 选择性的插入文章内容
      *
@@ -149,6 +153,7 @@ public interface ArticleService {
 
     /**
      * 插入文章
+     *
      * @param article
      * @return
      */
@@ -235,5 +240,14 @@ public interface ArticleService {
      */
     @Transactional
     int updateSelectiveById(Article article);
+
+    /**
+     * 根据栏目的id查询该栏目下的所有文章
+     *
+     * @param id 栏目的id
+     * @return 栏目下的所有文章
+     */
+    @Transactional
+    List<Article> listCategoryArticle(Long id);
 
 }
