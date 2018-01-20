@@ -3,6 +3,7 @@ package com.spring.blog2.service.Impl;
 import com.github.pagehelper.PageRowBounds;
 import com.spring.blog2.obj.Article;
 import com.spring.blog2.service.ArticleService;
+import org.apache.ibatis.session.RowBounds;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +36,17 @@ public class ArticleServiceImplTest {
     public void selectByCategoryId() {
         List<Article> list = articleService.listCategoryArticle(1L);
         System.out.println(list.size());
+    }
+
+    @Test
+    public void selectByCreateDat() {
+        PageRowBounds rowBounds = new PageRowBounds(1, 3);
+        List<Article> list = this.articleService.selectByCreateDate(rowBounds);
+        System.out.println(rowBounds.getTotal());
+        System.out.println(list.size());
+        List<Article> list1 = this.articleService.selectByCreateDate(new RowBounds(2, 3));
+        for (Article article : list1) {
+            System.out.println(article.getTitle());
+        }
     }
 }

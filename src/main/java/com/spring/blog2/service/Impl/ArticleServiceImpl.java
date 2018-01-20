@@ -4,28 +4,29 @@ import com.spring.blog2.dao.ArticleMapper;
 import com.spring.blog2.obj.Article;
 import com.spring.blog2.obj.ArticleExample;
 import com.spring.blog2.service.ArticleService;
-import com.spring.blog2.util.StringUtil;
 import com.spring.blog2.util.TimeUtil;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
-@Service
+@Service("articleService")
 public class ArticleServiceImpl implements ArticleService {
 
-    private final ArticleMapper articleMapper;
 
-    @Autowired
-    public ArticleServiceImpl(ArticleMapper articleMapper) {
-        this.articleMapper = articleMapper;
-    }
+    @Resource
+    private ArticleMapper articleMapper;
 
     @Override
     public long countByAuthor(String author) {
-        return 0;
+        ArticleExample articleExample = new ArticleExample();
+        articleExample.or().andAuthorNameEqualTo(author);
+        List<Article> list = articleMapper.selectByExample(articleExample);
+        return list.size();
     }
 
     @Override
@@ -57,15 +58,7 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Article> findAll() {
         ArticleExample articleExample = new ArticleExample();
         List<Article> list = articleMapper.selectByExample(articleExample);
-        for (Article article : list) {
-            String content = articleMapper.selectByPrimaryKey(article.getId()).getContent();
-            if (content.length() > 300) {
-                content = content.substring(0, content.length() / 3);
-            }
-            article.setContent(content);
-            article.setShortTime(TimeUtil.getShortTime(article.getCreatetime()));
-        }
-        return list;
+        return common(list);
     }
 
     @Override
@@ -110,71 +103,55 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public List<Article> selectByCreateDate(RowBounds rowBounds) {
-        List<Article> list = articleMapper.selectByCreateDate(rowBounds);
-        for (Article article : list) {
-//            String content = articleMapper.selectByPrimaryKey(article.getId()).getContent();
-            String content = article.getContent();
-            if (content.length() > 300) {
-                content = content.substring(0, content.length() / 3);
-            }
-            article.setContent(content);
-            article.setShortTime(TimeUtil.getShortTime(article.getCreatetime()));
-        }
-        return list;
+        ArticleExample example = new ArticleExample();
+        example.setOrderByClause(" createtime  DESC");
+        List<Article> list = articleMapper.selectByExampleWithBLOBs(example, rowBounds);
+        return common(list);
     }
 
     @Override
     public List<Article> selectByCreateDate() {
         List<Article> list = articleMapper.selectByCreateDate();
-        for (Article article : list) {
-//            String content = articleMapper.selectByPrimaryKey(article.getId()).getContent();
-            String content = article.getContent();
-            if (content.length() > 300) {
-                content = content.substring(0, content.length() / 3);
-            }
-            article.setContent(content);
-            article.setShortTime(TimeUtil.getShortTime(article.getCreatetime()));
-        }
-        return list;
+        return common(list);
     }
-
+    @Async
     @Override
     public int insertSelective(Article article) {
         return 0;
     }
-
+    @Async
     @Override
     public int insert(Article article) {
         article.setCreatetime(new Date());
         article.setAuthorId(1L);
         return articleMapper.insert(article);
     }
-
+    @Async
     @Override
     public int deleteById(long id) {
         return 0;
     }
-
+    @Async
     @Override
     public int deleteByIdList(List<Long> idList) {
         return 0;
     }
-
+    @Async
     @Override
     public int deleteByTitle(String title) {
         return 0;
     }
-
+    @Async
     @Override
     public int deleteBetweenDate(Date start, Date end) {
         return 0;
     }
-
+    @Async
     @Override
     public int deleteAfterDate(Date date) {
         return 0;
     }
-
+    @Async
     @Override
     public int deleteBeforeDate(Date date) {
         return 0;
@@ -200,8 +177,17 @@ public class ArticleServiceImpl implements ArticleService {
         ArticleExample articleExample = new ArticleExample();
         articleExample.or().andCategoryIdEqualTo(id);
         List<Article> list = articleMapper.selectByExampleWithBLOBs(articleExample);
+        return common(list);
+    }
+
+    /**
+     * 统一对文章进行截取的方法
+     *
+     * @param list 文章的计划外
+     * @return 截取文章内容成功后返回的文章
+     */
+    private List<Article> common(List<Article> list) {
         for (Article article : list) {
-//            String content = articleMapper.selectByPrimaryKey(article.getId()).getContent();
             String content = article.getContent();
             if (content.length() > 300) {
                 content = content.substring(0, content.length() / 3);

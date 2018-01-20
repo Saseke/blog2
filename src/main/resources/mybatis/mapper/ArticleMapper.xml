@@ -135,11 +135,11 @@
     <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into article (id, title, author_name, 
+    insert into article (title, author_name,
       createtime, updatetime, browseTime, 
       author_Id, category_id, content
       )
-    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{authorName,jdbcType=VARCHAR}, 
+    values (#{title,jdbcType=VARCHAR}, #{authorName,jdbcType=VARCHAR},
       #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, #{browsetime,jdbcType=INTEGER}, 
       #{authorId,jdbcType=BIGINT}, #{categoryId,jdbcType=BIGINT}, #{content,jdbcType=LONGVARCHAR}
       )

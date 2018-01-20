@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -30,13 +31,22 @@ public class IndexController {
     private final CategoryService categoryService;
 
     @GetMapping("/")
-    public String index(Model model) {
-        List<Article> list = articleService.selectByCreateDate();
-        List<Category> categorylist = categoryService.list();
-        logger.info("--------主页---------------");
-        logger.info("-----article的内容------" + list.toString() + "-------------");
+    public String index(@RequestParam(required = false) Integer page, Model model) {
+        PageRowBounds pageRowBounds;
+        int limit = 10;   //每页显示的条数
+        if (page != null) {
+            pageRowBounds = new PageRowBounds(page, limit);
+        } else {
+            page = 1;
+            pageRowBounds = new PageRowBounds(page, limit);
+        }
+        List<Article> list = articleService.selectByCreateDate(pageRowBounds);
+        List<Category> categoryList = categoryService.list();
+        model.addAttribute("categorylist", categoryList);
         model.addAttribute("list", list);
-        model.addAttribute("categorylist", categorylist);
+
+        model.addAttribute("total", Math.ceil(pageRowBounds.getTotal() / limit) + 1);
+        model.addAttribute("current", page);
         return "index";
     }
 

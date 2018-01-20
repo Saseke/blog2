@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
@@ -26,18 +27,16 @@ import java.util.*;
 @Controller
 @RequestMapping("/article")
 public class ArticleController {
-    @Autowired
+    @Resource
     private ImgConfig imgConfig;
-    private final ArticleService articleService;
-    private final Logger LOGGER = LoggerFactory.getLogger(ArticleController.class);
 
-    @Autowired
-    public ArticleController(ArticleService articleService) {
-        this.articleService = articleService;
-    }
-
-    @Autowired
+    @Resource
     private CategoryService categoryService;
+
+    @Resource
+    private ArticleService articleService;
+
+    private final Logger LOGGER = LoggerFactory.getLogger(ArticleController.class);
 
     @GetMapping("/see/{id}")
     public ModelAndView singleArticle(@PathVariable("id") String i, ModelAndView modelAndView) {

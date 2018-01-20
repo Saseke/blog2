@@ -84,7 +84,7 @@
                         <div class="post-meta">
                             <span class="author">作者：${article.authorName}</a></span> •
                             <time class="post-date">
-                            ${article.shortTime}
+                                ${article.shortTime}
                             </time>
                         </div>
                     </div>
@@ -107,8 +107,9 @@
             </#list>
                 <!--页数-->
                 <nav class="pagination" role="navigation">
-                    <span class="page-number">第  页 ⁄ 共  页</span>
-                    <span class="page-number" href="/?page=">></span>
+                    <a class="page-number" onclick="PageNum(${current-1})" href="/?page=${current-1}"><</a>
+                    <span class="page-number">第 ${current} 页 ⁄ 共 ${total} 页</span>
+                    <a class="page-number" onclick="PageNum(${current+1})" href="/?page=${current+1}">></a>
                 </nav>
             </main>
             <aside class="col-md-4 sidebar">
@@ -124,13 +125,7 @@
                     <#list categorylist as category>
                         <a href="/article/findarticles/${category.id}">${category.name}</a>
                     </#list>
-                    <#--<a href="">SpringBoot</a>-->
-                    <#--<a href="">Spring</a>-->
-                    <#--<a href="">jQuery</a>-->
-                    <#--<a href="">Java基础</a>-->
-                    <#--<a href="">Mybatis</a>-->
-                    <#--<a href="">Linux</a>-->
-                    <#--<a href="">SpringSecurity</a>-->
+
                     </div>
                 </div>
             </aside>
@@ -152,6 +147,14 @@
             </div>
         </div>
 </footer>
+<script type="text/javascript">
+    function PageNum(num) {
+        if (num == 0)
+            return Error;
+        if (num >${total})
+            return Error;
+    }
+</script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.fitvids.min.js"></script>
