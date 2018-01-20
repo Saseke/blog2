@@ -128,6 +128,13 @@
 
                     </div>
                 </div>
+                <div class="widget">
+                    <h4 class="title">github</h4>
+                    <div class="content tag-cloud">
+                        <a href="https://github.com/Yoke-Yoke"><img src="/img/github.jpg" width="46"
+                                                                    height="36"/></a>
+                    </div>
+                </div>
             </aside>
         </div>
     </div>
