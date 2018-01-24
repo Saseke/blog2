@@ -7,28 +7,22 @@ import com.spring.blog2.service.ArticleService;
 import com.spring.blog2.service.CategoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
 public class IndexController {
     private final Logger logger = LoggerFactory.getLogger(IndexController.class);
-    private final ArticleService articleService;
-
-    @Autowired
-    public IndexController(ArticleService articleService, CategoryService categoryService) {
-        this.articleService = articleService;
-        this.categoryService = categoryService;
-    }
-
-    private final CategoryService categoryService;
+    @Resource
+    private ArticleService articleService;
+    @Resource
+    private CategoryService categoryService;
 
     @GetMapping("/")
     public String index(@RequestParam(required = false) Integer page, Model model) {

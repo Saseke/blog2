@@ -3,6 +3,7 @@ package com.spring.blog2.service;
 
 import com.spring.blog2.obj.Article;
 import com.spring.blog2.obj.Category;
+import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;
 
@@ -11,11 +12,18 @@ import java.util.List;
  */
 public interface CategoryService {
     /**
-     * 列出所有的分类
+     * 列出所有的栏目
+     *
+     * @return 查询得到的所有栏目
+     */
+    List<Category> list();
+
+    /**
+     * 列出所有的分类,分页类型
      *
      * @return 找出的所有文章类型
      */
-    List<Category> list();
+    List<Category> list(RowBounds rowBounds);
 
     /**
      * 通过类型的id查找 对应的分类
@@ -57,5 +65,21 @@ public interface CategoryService {
      */
     int delete(long id);
 
+    /**
+     * 列出该栏目下的所有文章
+     *
+     * @param id
+     * @return
+     */
+    List<Article> listCategoryofArticle(Long id, boolean withBLOB);
 
+    /**
+     * 列出该栏目下的所有文章带分页效果
+     *
+     * @param id        栏目的id
+     * @param withBLOB  是否查询出文章的大文件
+     * @param rowBounds 分页
+     * @return
+     */
+    List<Article> listCategoryofArticle(Long id, boolean withBLOB, RowBounds rowBounds);
 }

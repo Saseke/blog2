@@ -2,8 +2,11 @@ package com.spring.blog2.dao;
 
 import com.spring.blog2.obj.Category;
 import com.spring.blog2.obj.CategoryExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -19,6 +22,8 @@ public interface CategoryMapper {
     int insertSelective(Category record);
 
     List<Category> selectByExample(CategoryExample example);
+
+    List<Category> selectByExample(CategoryExample example, RowBounds rowBounds);
 
     Category selectByPrimaryKey(Long id);
 

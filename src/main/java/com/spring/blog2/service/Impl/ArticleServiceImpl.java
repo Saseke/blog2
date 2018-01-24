@@ -6,11 +6,11 @@ import com.spring.blog2.obj.ArticleExample;
 import com.spring.blog2.service.ArticleService;
 import com.spring.blog2.util.TimeUtil;
 import org.apache.ibatis.session.RowBounds;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -31,7 +31,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public long counttotal() {
-        return 0;
+        ArticleExample articleExample = new ArticleExample();
+        List<Article> list = articleMapper.selectByExample(articleExample);
+        return list.size();
     }
 
     @Override
@@ -57,33 +59,46 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public List<Article> findAll() {
         ArticleExample articleExample = new ArticleExample();
-        List<Article> list = articleMapper.selectByExample(articleExample);
-        return common(list);
+        return articleMapper.selectByExample(articleExample);
     }
 
     @Override
     public List<Article> findAll(RowBounds rowBounds) {
-        return null;
+        ArticleExample articleExample = new ArticleExample();
+        return articleMapper.selectByExample(articleExample, rowBounds);
     }
 
     @Override
     public List<Article> findByIdList(List<Long> list) {
-        return null;
+        List<Article> articles = new ArrayList<>();
+        for (Long id : list) {
+            articles.add(articleMapper.selectByPrimaryKey(id));
+        }
+        return articles;
     }
 
     @Override
     public List<Article> findByTitle(String title, boolean withBLOB, boolean fuzzy) {
-        return null;
+        ArticleExample articleExample = new ArticleExample();
+        articleExample.or().andTitleEqualTo(title);
+        if (withBLOB) return articleMapper.selectByExampleWithBLOBs(articleExample);
+        else return articleMapper.selectByExample(articleExample);
     }
 
     @Override
     public List<Article> findByOrderByBrowse(boolean withBLOB, RowBounds rowBounds) {
-        return null;
+        ArticleExample articleExample = new ArticleExample();
+        articleExample.setOrderByClause("browseTime DESC");
+        if (withBLOB) return articleMapper.selectByExampleWithBLOBs(articleExample, rowBounds);
+        else return articleMapper.selectByExample(articleExample, rowBounds);
     }
 
     @Override
     public List<Article> findByOrderByBrowse(boolean withBLOB) {
-        return null;
+        ArticleExample articleExample = new ArticleExample();
+        articleExample.setOrderByClause("browseTime DESC");
+        if (withBLOB) return articleMapper.selectByExampleWithBLOBs(articleExample);
+        else return articleMapper.selectByExample(articleExample);
     }
 
     @Override
@@ -97,8 +112,11 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public List<Article> findByBrowseGreater(long time, boolean withBLOB) {
-        return null;
+    public List<Article> findByBrowseGreater(Integer time, boolean withBLOB) {
+        ArticleExample articleExample = new ArticleExample();
+        articleExample.or().andBrowsetimeGreaterThanOrEqualTo(time);
+        if (withBLOB) return articleMapper.selectByExampleWithBLOBs(articleExample);
+        else return articleMapper.selectByExample(articleExample);
     }
 
     @Override
@@ -114,11 +132,13 @@ public class ArticleServiceImpl implements ArticleService {
         List<Article> list = articleMapper.selectByCreateDate();
         return common(list);
     }
+
     @Async
     @Override
     public int insertSelective(Article article) {
         return 0;
     }
+
     @Async
     @Override
     public int insert(Article article) {
@@ -126,31 +146,47 @@ public class ArticleServiceImpl implements ArticleService {
         article.setAuthorId(1L);
         return articleMapper.insert(article);
     }
+
     @Async
     @Override
     public int deleteById(long id) {
-        return 0;
+        ArticleExample articleExample = new ArticleExample();
+        articleExample.or().andIdEqualTo(id);
+        return articleMapper.deleteByExample(articleExample);
     }
+
     @Async
     @Override
     public int deleteByIdList(List<Long> idList) {
-        return 0;
+        int count = 0;
+        for (Long id : idList) {
+            ArticleExample articleExample = new ArticleExample();
+            articleExample.or().andIdEqualTo(id);
+            count = articleMapper.deleteByExample(articleExample);
+        }
+        return count;
     }
+
     @Async
     @Override
     public int deleteByTitle(String title) {
-        return 0;
+        ArticleExample articleExample = new ArticleExample();
+        articleExample.or().andTitleEqualTo(title);
+        return articleMapper.deleteByExample(articleExample);
     }
+
     @Async
     @Override
     public int deleteBetweenDate(Date start, Date end) {
         return 0;
     }
+
     @Async
     @Override
     public int deleteAfterDate(Date date) {
         return 0;
     }
+
     @Async
     @Override
     public int deleteBeforeDate(Date date) {
@@ -159,6 +195,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public int updateAllWithoutBLOBById(Article article) {
+        ArticleExample articleExample = new ArticleExample();
+        articleExample.or().andIdEqualTo(article.getId());
+        articleMapper.selectByExample(articleExample);
         return 0;
     }
 

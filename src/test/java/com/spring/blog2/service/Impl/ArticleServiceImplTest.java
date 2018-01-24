@@ -6,16 +6,20 @@ import com.spring.blog2.service.ArticleService;
 import org.apache.ibatis.session.RowBounds;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ArticleServiceImplTest {
-    @Autowired
+    private static final Logger logger = LoggerFactory.getLogger(ArticleServiceImplTest.class);
+    @Resource
     private ArticleService articleService;
 
     @Test
@@ -48,5 +52,139 @@ public class ArticleServiceImplTest {
         for (Article article : list1) {
             System.out.println(article.getTitle());
         }
+    }
+
+    @Test
+    public void countByAuthor() {
+        long count = articleService.countByAuthor("yoke");
+        logger.info("---------------------yoke写的文章数量--------------" + count + "------------------");
+    }
+
+    @Test
+    public void counttotal() {
+        long count = articleService.counttotal();
+        logger.info("--------------文章总数-------" + count + "-------------------------");
+    }
+
+    @Test
+    public void countByDate() {
+    }
+
+    @Test
+    public void countByDateAfter() {
+    }
+
+    @Test
+    public void countByDateBefore() {
+    }
+
+    @Test
+    public void findById() {
+        Article article = articleService.findById(5);
+        logger.info("---------------查询id为1的文章 ---------" + article.getId() + "------------------");
+    }
+
+    @Test
+    public void findAll() {
+        List<Article> list = articleService.findAll();
+        logger.info("---------------文章的总数--------------" + list.size() + "-------------------");
+    }
+
+    @Test
+    public void findAll1() {
+        List<Article> list = articleService.findAll(new PageRowBounds(1, 10));
+        logger.info("--------------分页后文章第一页的数量-----------" + list.size() + "--------------------");
+
+    }
+
+    @Test
+    public void findByIdList() {
+        List<Long> list = new ArrayList<>();
+        list.add(1L);
+        list.add(3L);
+        List<Article> list1 = articleService.findByIdList(list);
+        logger.info("----------------findByIdList---------------" + list1.size() + "----------------------");
+    }
+
+    @Test
+    public void findByTitle() {
+        List<Article> list = articleService.findByTitle("demo", false, false);
+        logger.info("------------------------findByTitle---------------" + list.size() + "--------------------");
+    }
+
+    @Test
+    public void findByOrderByBrowse() {
+    }
+
+    @Test
+    public void findByOrderByBrowse1() {
+    }
+
+    @Test
+    public void findByCreateDate() {
+    }
+
+    @Test
+    public void findByCreateDate1() {
+    }
+
+    @Test
+    public void findByBrowseGreater() {
+    }
+
+    @Test
+    public void selectByCreateDate1() {
+    }
+
+    @Test
+    public void selectByCreateDate2() {
+    }
+
+    @Test
+    public void insertSelective() {
+    }
+
+    @Test
+    public void insert() {
+    }
+
+    @Test
+    public void deleteById() {
+    }
+
+    @Test
+    public void deleteByIdList() {
+    }
+
+    @Test
+    public void deleteByTitle() {
+    }
+
+    @Test
+    public void deleteBetweenDate() {
+    }
+
+    @Test
+    public void deleteAfterDate() {
+    }
+
+    @Test
+    public void deleteBeforeDate() {
+    }
+
+    @Test
+    public void updateAllWithoutBLOBById() {
+    }
+
+    @Test
+    public void updateAllById() {
+    }
+
+    @Test
+    public void updateSelectiveById() {
+    }
+
+    @Test
+    public void listCategoryArticle() {
     }
 }

@@ -123,7 +123,7 @@ public interface ArticleService {
      * @param withBLOB 是否加载大文件
      * @return 查询得到的文章
      */
-    List<Article> findByBrowseGreater(long time, boolean withBLOB);
+    List<Article> findByBrowseGreater(Integer time, boolean withBLOB);
 
     /**
      * 查询所有的文章，默认选择按日期 排序
