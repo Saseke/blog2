@@ -20,22 +20,19 @@
                class="layui-input">
     </div>
 </div>
-<!--<div class="layui-form-item">
-    <label class="layui-form-label">选择框</label>
-    <div class="layui-input-block">
-        <select id="select" lay-verify="required">
-        </select>
+<form class="layui-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label">栏目选择</label>
+        <div class="layui-input-block">
+            <select name="category" lay-verify="required">
+                <#list categories as category>
+                    <option value="${category.id}">${category.name}</option>
+                </#list>
+            </select>
+        </div>
     </div>
-</div>-->
+</form>
 
-<!--<div class="layui-form-item">
-    <label class="layui-form-label">作者</label>
-    <div class="layui-input-block">
-        <input type="text" id="author" name="author" required lay-verify="required" placeholder="作者"
-               autocomplete="off"
-               class="layui-input">
-    </div>
-</div>-->
 <div style="width:90%;margin-left:5%;margin-top:100px;background-color:#fff;">
     <textarea name="txt" id="txt" style="display:none;"></textarea>
 </div>
@@ -44,16 +41,6 @@
 </html>
 <script type="text/javascript">
     window.onload = function () {
-//        $.ajax({
-//            type: "GET",
-//            url: "/column/list",
-//            success: function (data) {
-//
-//                for (var i in data) {
-//                    $("#select").append("<option value=" + data[i].id + ">Select" + data[i].name + "</option>");
-//                }
-//            }
-//        });
         layui.use('layedit', function () {
             var layedit = layui.layedit;
 
@@ -83,7 +70,8 @@
                     data: JSON.stringify({
 //                        "authorName": authorName,
                         "title": title,
-                        "content": content
+                        "content": content,
+                        "categoryId": columnId
                     }),
                     success: function (data) {
                         console.log(data);

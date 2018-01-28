@@ -49,8 +49,8 @@ public class CategoryServiceImplTest {
 
     @Test
     public void findByName() {
-        Category category = categoryService.findByName("demo3");
-        LOGGER.info("-------------------名字为demo3的栏目信息-------------" + category.getId() + category.getCreateDate() + "----------------------------------");
+//        Category category = categoryService.findByName("demo3");
+//        LOGGER.info("-------------------名字为demo3的栏目信息-------------" + category.getId() + category.getCreateDate() + "----------------------------------");
     }
 
     @Test

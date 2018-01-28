@@ -9,12 +9,7 @@ import org.springframework.web.WebApplicationInitializer;
 
 @SpringBootApplication
 @MapperScan("com.spring.blog2.dao")
-public class Blog2Application extends SpringBootServletInitializer {
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(Blog2Application.class);
-    }
-
+public class Blog2Application {
     public static void main(String[] args) {
         SpringApplication.run(Blog2Application.class, args);
     }

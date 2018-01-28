@@ -6,7 +6,7 @@
     <groupId>com.spring</groupId>
     <artifactId>blog2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>blog2</name>
     <description>Demo project for Spring Boot</description>
@@ -30,7 +30,6 @@
             <artifactId>pagehelper</artifactId>
             <version>5.0.4</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -40,11 +39,6 @@
                     <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -58,10 +52,6 @@
             <version>5.1.44</version>
         </dependency>
         <!--thymeleaf-->
-        <!-- <dependency>
-             <groupId>org.springframework.boot</groupId>
-             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-         </dependency>-->
         <!--log4j的使用-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -151,6 +141,10 @@
                     <target>1.7</target>
                 </configuration>
                 <version>3.7.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.mybatis.generator</groupId>

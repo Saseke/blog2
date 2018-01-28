@@ -80,7 +80,7 @@ public class ArticleServiceImplTest {
 
     @Test
     public void findById() {
-        Article article = articleService.findById(5);
+        Article article = articleService.findById(3);
         logger.info("---------------查询id为1的文章 ---------" + article.getId() + "------------------");
     }
 

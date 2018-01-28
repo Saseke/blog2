@@ -42,7 +42,8 @@ public class WebConfigration extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/article/**").permitAll()
+                .antMatchers("/article/see/**").permitAll()
+                .antMatchers("article/findarticles/**").permitAll()
                 .antMatchers("/**/*.js").permitAll()
                 .antMatchers("/**/*.css").permitAll()
                 .antMatchers("/**/*.jpg").permitAll()

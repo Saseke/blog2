@@ -104,9 +104,9 @@
     <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into comment (id, author_id, content, 
+    insert into comment (author_id, content,
       article_id, date)
-    values (#{id,jdbcType=BIGINT}, #{authorId,jdbcType=BIGINT}, #{content,jdbcType=VARCHAR}, 
+    values (#{authorId,jdbcType=BIGINT}, #{content,jdbcType=VARCHAR},
       #{articleId,jdbcType=BIGINT}, #{date,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.spring.blog2.obj.Comment">
